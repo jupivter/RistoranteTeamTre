@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Bevanda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Portata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Ristorante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Primo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/classes/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/marta/Desktop/RistoranteGitProject/RistoranteTeamTre"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marta/Desktop/RistoranteGitProject/RistoranteTeamTre&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

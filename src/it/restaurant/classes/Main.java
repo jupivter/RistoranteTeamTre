@@ -1,5 +1,7 @@
 package it.restaurant.classes;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,7 +18,17 @@ public class Main {
         menu.addBevanda(new Bevanda("Vino Rosso", 5.00));
         menu.addBevanda(new Bevanda("Acqua frizzante", 1.50));
 
+
+        new Primo("Spaghetti alla carbonara",9);
+        new Primo("Pappardelle al ragu di cinghiale",11);
+        new Primo("Cannelloni al ragu",10);
+
         ristorante.printDetails();
         menu.printDetails(ristorante.getName());
+
+        System.out.println("Hello ");
+
+
+
     }
 }

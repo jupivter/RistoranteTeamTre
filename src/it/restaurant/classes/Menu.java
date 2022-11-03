@@ -9,6 +9,7 @@ public class Menu {
     private String menuType;
     private List<Bevanda> bevande;
 
+
     public Menu(String menuType){
         this.menuType = menuType;
         bevande = new ArrayList<>();
@@ -35,6 +36,7 @@ public class Menu {
         this.bevande = bevande;
     }
 
+
     @Override
     public String toString() {
         return "Menu{" +
@@ -53,5 +55,6 @@ public class Menu {
     public void addBevanda(Bevanda bevanda){
         this.bevande.add(bevanda);
     }
+
 
 }
