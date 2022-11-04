@@ -7,17 +7,17 @@ import java.util.List;
 public class Menu {
 
     private String menuType;
-    private List<Bevanda> bevande;
+    private List<Portata> portateList;
 
 
     public Menu(String menuType){
         this.menuType = menuType;
-        bevande = new ArrayList<>();
+        portateList = new ArrayList<>();
     }
 
-    public Menu(String menuType, List <Bevanda> bevande){
+    public Menu(String menuType, List <Portata> portate){
         this.menuType = menuType;
-        this.bevande = bevande;
+        this.portateList = portate;
     }
 
     public String getMenuType() {
@@ -28,33 +28,23 @@ public class Menu {
         this.menuType = menuType;
     }
 
-    public List<Bevanda> getBevande() {
-        return bevande;
-    }
-
-    public void setBevande(List<Bevanda> bevande) {
-        this.bevande = bevande;
-    }
-
 
     @Override
     public String toString() {
         return "Menu{" +
                 "menuType='" + menuType + '\'' +
-                ", bevande=" + Arrays.toString(bevande.toArray()) +
+                ", bevande=" + Arrays.toString(portateList.toArray()) +
                 '}';
     }
 
     public void printDetails(String restaurantName){
         System.out.println(restaurantName + "\n" + "Menu: " + menuType.toLowerCase());
-        for(Bevanda bevanda : bevande){
-            bevanda.printDetails();
+        for(Portata portata : portateList){
+            portata.printDetails();
         }
     }
 
-    public void addBevanda(Bevanda bevanda){
-        this.bevande.add(bevanda);
+    public void addPortata(Portata portata){
+        portateList.add(portata);
     }
-
-
 }

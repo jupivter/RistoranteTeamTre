@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Primo extends Portata {
-List<String> primi;
+public List<String> primi;
 
     public List<String> getPrimo() {
         return this.primi;

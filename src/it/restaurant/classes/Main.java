@@ -10,13 +10,10 @@ public class Main {
                 "63733020363", "ilghiottone@gmail.com");
 
         Menu menu = new Menu("Carne");
-        /*menu.getBevande().add(new Bevanda("Lambrusco", 10.00));
-        menu.getBevande().add(new Bevanda("Vino Rosso", 5.00));
-        menu.getBevande().add(new Bevanda("Acqua frizzante", 1.50));*/
 
-        menu.addBevanda(new Bevanda("Lambrusco", 10.00));
-        menu.addBevanda(new Bevanda("Vino Rosso", 5.00));
-        menu.addBevanda(new Bevanda("Acqua frizzante", 1.50));
+        menu.addPortata(new Bevanda("Lambrusco", 10.00));
+        menu.addPortata(new Bevanda("Vino Rosso", 5.00));
+        menu.addPortata(new Bevanda("Acqua frizzante", 1.50));
 
 
         new Primo("Spaghetti alla carbonara",9);
@@ -25,10 +22,5 @@ public class Main {
 
         ristorante.printDetails();
         menu.printDetails(ristorante.getName());
-
-        System.out.println("Hello ");
-
-
-
     }
 }
