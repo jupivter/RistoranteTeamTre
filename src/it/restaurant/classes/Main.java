@@ -14,7 +14,7 @@ public class Main {
         menu.addPortata(new Bevanda("Lambrusco", 10.00));
         menu.addPortata(new Bevanda("Vino Rosso", 5.00));
         menu.addPortata(new Bevanda("Acqua frizzante", 1.50));
-
+        
 
         new Primo("Spaghetti alla carbonara",9);
         new Primo("Pappardelle al ragu di cinghiale",11);
