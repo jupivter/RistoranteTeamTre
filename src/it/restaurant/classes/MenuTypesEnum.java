@@ -6,6 +6,6 @@ public enum MenuTypesEnum {
     CARNE,
     VEGETARIANO,
     BAMBINO,
-    GLUTENFREE
+    GLUTENFREE;
 
 }

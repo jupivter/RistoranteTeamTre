@@ -9,7 +9,7 @@ public class Main {
         Ristorante ristorante = new Ristorante("Il ghiottone", "Via Indipendenza, 4",
                 "63733020363", "ilghiottone@gmail.com");
 
-        Menu menu = new Menu("Carne");
+        Menu menu = new Menu(MenuTypesEnum.CARNE);
 
         menu.addPortata(new Bevanda("Lambrusco", 10.00));
         menu.addPortata(new Bevanda("Vino Rosso", 5.00));
