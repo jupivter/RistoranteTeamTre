@@ -14,11 +14,11 @@ public class Main {
         menu.addPortata(new Bevanda("Lambrusco", 10.00));
         menu.addPortata(new Bevanda("Vino Rosso", 5.00));
         menu.addPortata(new Bevanda("Acqua frizzante", 1.50));
-        
 
-        new Primo("Spaghetti alla carbonara",9);
-        new Primo("Pappardelle al ragu di cinghiale",11);
-        new Primo("Cannelloni al ragu",10);
+
+        menu.addPortata(new Primo("Spaghetti alla carbonara",9));
+        menu.addPortata(new Primo("Pappardelle al ragu di cinghiale",11));
+        menu.addPortata(new Primo("Cannelloni al ragu",10));
 
         ristorante.printRistoranteDetails();
         menu.printMenuDetails();
