@@ -1,7 +1,6 @@
 package it.restaurant.classes;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Menu {
@@ -36,21 +35,12 @@ public class Menu {
         this.portateList = portateList;
     }
 
-    @Override
-    public String toString() {
-        return "Menu{" +
-                "menuType='" + menuTypesEnum + '\'' +
-                ", bevande=" + Arrays.toString(portateList.toArray()) +
-                '}';
-    }
-
-    public void printDetails(String restaurantName){
-        System.out.println(restaurantName + "\n" + "Menu: " + menuTypesEnum);
+    public void printMenuDetails(){
+        System.out.println("Menu: " + menuTypesEnum);
         for(Portata portata : portateList){
-            portata.printDetails();
+            portata.printPortataDetails();
         }
     }
-
     public void addPortata(Portata portata){
         portateList.add(portata);
     }

@@ -5,7 +5,7 @@ public class Portata {
     private String name;
     private double price;
 
-    public Portata(String name, double price){
+    public Portata(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -26,15 +26,9 @@ public class Portata {
         this.price = price;
     }
 
-    public void printDetails(){
+    public void printPortataDetails() {
         System.out.println(name + " - " + String.format("%.2f", price) + " euro");
     }
 
-    @Override
-    public String toString() {
-        return "Portata{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
-    }
 }
+

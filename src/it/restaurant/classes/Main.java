@@ -20,7 +20,7 @@ public class Main {
         new Primo("Pappardelle al ragu di cinghiale",11);
         new Primo("Cannelloni al ragu",10);
 
-        ristorante.printDetails();
-        menu.printDetails(ristorante.getName());
+        ristorante.printRistoranteDetails();
+        menu.printMenuDetails();
     }
 }

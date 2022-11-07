@@ -22,8 +22,7 @@ public class Ristorante {
         this.name = name;
     }
 
-    public void printDetails(){
+    public void printRistoranteDetails(){
         System.out.println("Dati ristorante: " + name + " - " + address + " - " + phoneNumber + " - " + email);
     }
-
 }
