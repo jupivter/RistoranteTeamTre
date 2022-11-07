@@ -15,6 +15,10 @@ public class Main {
         menu.addPortata(new Bevanda("Vino Rosso", 5.00));
         menu.addPortata(new Bevanda("Acqua frizzante", 1.50));
 
+        menu.addPortata(new Deseert("Sorbetto al limone", 5.00));
+        menu.addPortata(new Deseert("Parfait mandorle", 3.50));
+        menu.addPortata(new Deseert("Parfait pistacchio", 3.50));
+
 
         menu.addPortata(new Primo("Spaghetti alla carbonara",9));
         menu.addPortata(new Primo("Pappardelle al ragu di cinghiale",11));
