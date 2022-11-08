@@ -17,7 +17,9 @@ public class Main {
         menu.addPortata(new Primo("Pappardelle al ragu di cinghiale",11));
         menu.addPortata(new Primo("Cannelloni al ragu",10));
 
-        //secondi
+        menu.addPortata(new Secondo("Cotoletta",7.50));
+        menu.addPortata(new Secondo("Grigliata di cinghiale",13.60));
+        menu.addPortata(new Secondo("Funghi ripieni",10.40));
 
         menu.addPortata(new Dessert("Sorbetto al limone", 5.00));
         menu.addPortata(new Dessert("Parfait mandorle", 3.50));
