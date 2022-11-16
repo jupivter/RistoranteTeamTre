@@ -1,6 +1,6 @@
 package it.restaurant.prenotazione;
 
-import it.restaurant.classes.portate.ClienteTypesEnum;
+
 
 public class Cliente {
 
@@ -8,10 +8,14 @@ public class Cliente {
     private String cognome;
     private ClienteTypesEnum tipologia;
 
-    public Cliente(String nome, String cognome, ClienteTypesEnum tipologia){
+
+    public int numeroDiCellulare;
+
+    public Cliente(String nome, String cognome, ClienteTypesEnum tipologia, int numeroDiCellulare) {
         this.nome = nome;
         this.cognome = cognome;
         this.tipologia = tipologia;
+        this.numeroDiCellulare = numeroDiCellulare;
     }
 
     public String getNome() {
@@ -30,6 +34,14 @@ public class Cliente {
         this.cognome = cognome;
     }
 
+    public int getNumeroDiCellulare() {
+        return numeroDiCellulare;
+    }
+
+    public void setNumeroDiCellulare(int numeroDiCellulare) {
+        this.numeroDiCellulare = numeroDiCellulare;
+    }
+
     public ClienteTypesEnum getTipologia() {
         return tipologia;
     }
@@ -37,4 +49,13 @@ public class Cliente {
     public void setTipologia(ClienteTypesEnum tipologia) {
         this.tipologia = tipologia;
     }
+
+    public String datiCliente() {
+        return "Cliente: " + this.nome + " - " + this.cognome + " - " + this.numeroDiCellulare + " - " + this.tipologia;
+    }
+
+    public void prenota(Cliente cliente, Tavolo tavolo) {
+        System.out.println("Il "+ cliente.datiCliente()+ "\n" +"ha prenotato il "+  tavolo.infoTavolo());
+    }
+
 }
