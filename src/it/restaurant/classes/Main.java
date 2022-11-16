@@ -1,5 +1,6 @@
 package it.restaurant.classes;
 
+import it.restaurant.classes.secondi.*;
 import it.restaurant.prenotazione.Cliente;
 import it.restaurant.prenotazione.ClienteTypesEnum;
 import it.restaurant.prenotazione.Tavolo;
@@ -30,7 +31,14 @@ public class Main {
 
         menu.addPortata(new Secondo("Cotoletta",7.50));
         menu.addPortata(new Secondo("Grigliata di cinghiale",13.60));
-        menu.addPortata(new Secondo("Funghi ripieni",10.40));
+        menu.addPortata(new SecondoVegetariano("Funghi ripieni non di tritato",10.40));
+        menu.addPortata(new SecondoVegetariano("Zucchine grigliate",6.40));
+        menu.addPortata(new SecondoVegano("Burger Vegani",8.40));
+        menu.addPortata(new SecondoVegano("Grigliata Verdure",9.80));
+        menu.addPortata(new SecondoCeliaco("Burger di Merluzzo",15.40));
+        menu.addPortata(new SecondoCeliaco("Croccole senza Glutine ",5.40));
+        menu.addPortata(new SecondoBambino("Cotoletta Panata",6.40));
+        menu.addPortata(new SecondoBambino("Pizza Baby",8.50));
 
         menu.addPortata(new Dessert("Sorbetto al limone", 5.00));
         menu.addPortata(new Dessert("Parfait mandorle", 3.50));

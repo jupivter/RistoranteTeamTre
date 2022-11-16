@@ -1,4 +1,6 @@
-package it.restaurant.classes;
+package it.restaurant.classes.secondi;
+
+import it.restaurant.classes.Portata;
 
 public class Secondo extends Portata {
 
