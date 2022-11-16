@@ -1,4 +1,4 @@
-package it.restaurant.classes;
+package it.restaurant;
 
 public class Ristorante {
 
@@ -23,6 +23,7 @@ public class Ristorante {
     }
 
     public void printRistoranteDetails(){
-        System.out.println("Dati ristorante: " + name + " - " + address + " - " + phoneNumber + " - " + email);
+        System.out.println("Dati ristorante: " + name + " - " + address + " - " + phoneNumber + " - " + email +
+                "\n============================================================================================");
     }
 }

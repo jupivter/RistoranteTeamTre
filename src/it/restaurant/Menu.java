@@ -1,4 +1,6 @@
-package it.restaurant.classes;
+package it.restaurant;
+
+import it.restaurant.portate.Portata;
 
 import java.util.ArrayList;
 import java.util.List;

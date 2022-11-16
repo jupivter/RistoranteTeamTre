@@ -1,4 +1,4 @@
-package it.restaurant.classes;
+package it.restaurant.portate;
 
 public class Dessert extends Portata{
 

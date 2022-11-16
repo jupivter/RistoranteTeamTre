@@ -1,6 +1,6 @@
-package it.restaurant.classes.secondi;
+package it.restaurant.portate.secondi;
 
-import it.restaurant.classes.Portata;
+import it.restaurant.portate.Portata;
 
 public class SecondoCeliaco extends Portata {
     public SecondoCeliaco(String name, double price) {
