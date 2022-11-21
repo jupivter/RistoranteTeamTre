@@ -1,9 +1,5 @@
 package it.restaurant;
 
-import it.restaurant.portate.Portata;
-
-import java.util.ArrayList;
-
 /**
  * Creazione della Classe padre Menu
  */
@@ -13,7 +9,6 @@ public class Menu {
      * Inserita la variabile di istanza menuTypesEnum
      */
     private MenuTypesEnum menuTypesEnum;
-    ArrayList<Portata> menuBevande = new ArrayList<>();
 
 
     /**

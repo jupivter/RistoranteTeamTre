@@ -234,7 +234,7 @@ public class Main {
          * PS. In caso di implementazione del for cancellare i vari Object.portatainfo().
          */
 
-        System.out.println("\n-------------------------- MENU LIST --------------------------------------------------\n");
+       /* System.out.println("\n-------------------------- MENU LIST --------------------------------------------------\n");
 
         for (int i = 0; i < listMenu.size(); i++) {
             System.out.println("");
@@ -242,7 +242,7 @@ public class Main {
             {
                 System.out.println("Menù " +Arrays.asList(listMenu.get(i).get(j).portataInfo2())+ " ");
             }
-        }
+        }*/
 
 
         /**
@@ -266,8 +266,7 @@ public class Main {
 
 
         /**
-         * Creazione Oggetti Cliente
-         * E aggiunzione degli oggetti Cliente all' ArrayList gruppo1Clienti
+         * Creazione oggetti clienti
          */
 
         System.out.println("\n-------------------------- CLIENTI ----------------------------------------------------\n");
