@@ -14,7 +14,7 @@ public class Main {
         Ristorante ristorante = new Ristorante("Il ghiottone", "Via Indipendenza, 4",
                 "63733020363", "ilghiottone@gmail.com");
 
-        Menu menu = new Menu(MenuTypesEnum.CARNE);
+        Menu menu = new Menu(MenuTypesEnum.BASECARNE);
 
         Cliente cliente1 = new Cliente("Luca", "Rossi", ClienteTypesEnum.CARNIVORO, 327302658);
         Cliente cliente2 = new Cliente("Marco", "Verdi",ClienteTypesEnum.CARNIVORO, 328302568);
@@ -29,8 +29,8 @@ public class Main {
         menu.addPortata(new Bevanda("Vino Rosso", 5.00));
         menu.addPortata(new Bevanda("Acqua frizzante", 1.50));
         // Primi di carne
-        menu.addPortata(new Primo("Spaghetti alla carbonara",9));
-        menu.addPortata(new Primo("Pappardelle al ragu di cinghiale",11));
+        menu.addPortata(new PrimoBaseCarne("Spaghetti alla carbonara",9));
+        menu.addPortata(new PrimoBaseCarne("Pappardelle al ragu di cinghiale",11));
         // Primi vegetariani
         menu.addPortata(new PrimoVegetariano("Carbonara di zucchine",8.5));
         menu.addPortata(new PrimoVegetariano("Trofie alla crema di pesto e noci",11.50));
