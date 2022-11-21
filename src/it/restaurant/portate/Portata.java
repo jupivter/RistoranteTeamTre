@@ -17,11 +17,12 @@ public class Portata extends Menu {
     /**
      * Inserito metodo costruttore classe figlio con super della classe padre Menu
      * Parametrizzato con :
+     *
      * @param menuTypesEnum
      * @param name
      * @param price
      */
-    public Portata(String tipologia,MenuTypesEnum menuTypesEnum, String name, double price) {
+    public Portata(String tipologia, MenuTypesEnum menuTypesEnum, String name, double price) {
         super(menuTypesEnum);
         this.tipologia = tipologia;
         this.name = name;
@@ -54,8 +55,10 @@ public class Portata extends Menu {
      */
 
     public void portataInfo() {
-        System.out.println("Portata : "+ this.tipologia  + " - " + this.name + " - " +  this.price + " euro - "+ getMenuTypesEnum());
+        System.out.println("Portata : " + this.tipologia + " - " + this.name + " - " + this.price + " euro - " + getMenuTypesEnum());
     }
+
     public String portataInfo2() {
-        return"Portata : "+ this.tipologia + " - " + this.name + " - " +  this.price + " euro - " + getMenuTypesEnum();
+        return "Portata : " + this.tipologia + " - " + this.name + " - " + this.price + " euro - " + getMenuTypesEnum();
     }
+}

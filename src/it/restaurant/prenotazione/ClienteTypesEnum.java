@@ -12,8 +12,6 @@ package it.restaurant.prenotazione;
 
 public enum ClienteTypesEnum {
 
-
-
     VEGANO,
 
     BASECARNE,
@@ -23,7 +21,5 @@ public enum ClienteTypesEnum {
     BAMBINO,
 
     CELIACO;
-
-
 
 }

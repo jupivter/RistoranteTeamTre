@@ -7,7 +7,6 @@ import it.restaurant.portate.Portata;
  * Con implementazione di costruttore
  */
 public class SecondoBambino extends Portata {
-
     public SecondoBambino(String tipologia, MenuTypesEnum menuTypesEnum, String name, double price) {
         super(tipologia, menuTypesEnum, name, price);
     }

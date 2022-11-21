@@ -152,10 +152,10 @@ public class Main {
         grigliataVerdure.portataInfo();
 
 
-/**
- * Creazione Oggetti Primo e Secondo
- * E aggiunzione degli oggetti PrimoCeliaco e SecondoCeliaco all' ArrayList menùCeliaco
- */
+        /**
+         * Creazione Oggetti Primo e Secondo
+         * E aggiunzione degli oggetti PrimoCeliaco e SecondoCeliaco all' ArrayList menùCeliaco
+         */
 
 
         System.out.println("\n-------------------------- MENU GLUTENFREE --------------------------------------------\n");
@@ -177,10 +177,10 @@ public class Main {
         burgerDiMerluzzo.portataInfo();
         croccoleSenzaGlutine.portataInfo();
 
-/**
- * Creazione Oggetti Primo e Secondo
- * E aggiunzione degli oggetti PrimoBambino e SecondoBambino all' ArrayList menùBambino
- */
+        /**
+         * Creazione Oggetti Primo e Secondo
+         * E aggiunzione degli oggetti PrimoBambino e SecondoBambino all' ArrayList menùBambino
+         */
 
 
         System.out.println("\n-------------------------- MENU BAMBINO -----------------------------------------------\n");
@@ -202,10 +202,10 @@ public class Main {
         cotolettaPanata.portataInfo();
         pizzaBaby.portataInfo();
 
-/**
- * Creazione Oggetti Dessert
- * E aggiunzione degli oggetti Dessert all' ArrayList menùDessert
- */
+        /**
+         * Creazione Oggetti Dessert
+         * E aggiunzione degli oggetti Dessert all' ArrayList menùDessert
+         */
 
 
         System.out.println("\n-------------------------- MENU DESSERT -----------------------------------------------\n");
@@ -224,6 +224,122 @@ public class Main {
         parfaitMandorle.portataInfo();
         parfaitPistacchi.portataInfo();
         cannoloScomposto.portataInfo();
+
+
+        /**
+         * Inseriamo un ciclo for con for annidato per mandare a schermo,
+         * tutti gli oggetti contenenti nelle liste menu a sua volta contenute dalla listMenu principale
+         *
+         * Lo commentiamo qualora ci fosse necessita di implementarlo causa codice lento.
+         * PS. In caso di implementazione del for cancellare i vari Object.portatainfo().
+         */
+
+        System.out.println("\n-------------------------- MENU LIST --------------------------------------------------\n");
+
+        for (int i = 0; i < listMenu.size(); i++) {
+            System.out.println("");
+            for (int j = 0; j < listMenu.get(i).size(); j++)
+            {
+                System.out.println("Menù " +Arrays.asList(listMenu.get(i).get(j).portataInfo2())+ " ");
+            }
+        }
+
+
+        /**
+         * Creazione Oggetti Tavolo
+         */
+
+        System.out.println("\n-------------------------- TAVOLI -----------------------------------------------------\n");
+
+
+        Tavolo tavolo1 = new Tavolo(2, 1, true);
+        Tavolo tavolo2 = new Tavolo(2, 2, true);
+        Tavolo tavolo3 = new Tavolo(4, 3, true);
+        Tavolo tavolo4 = new Tavolo(6, 4, true);
+        Tavolo tavolo5 = new Tavolo(8, 5, true);
+
+        tavoliList.add(tavolo1);
+        tavoliList.add(tavolo2);
+        tavoliList.add(tavolo3);
+        tavoliList.add(tavolo4);
+        tavoliList.add(tavolo5);
+
+
+        /**
+         * Creazione Oggetti Cliente
+         * E aggiunzione degli oggetti Cliente all' ArrayList gruppo1Clienti
+         */
+
+        System.out.println("\n-------------------------- CLIENTI ----------------------------------------------------\n");
+
+
+        Cliente lucaRossi = new Cliente("Luca", "Rossi",ClienteTypesEnum.BASECARNE, 327302658);
+        Cliente marcoVerdi = new Cliente("Marco", "Verdi",ClienteTypesEnum.VEGETARIANO, 328304968);
+        Cliente federicoBianchi = new Cliente("Federico", "Bianchi", ClienteTypesEnum.VEGANO, 329305568);
+        Cliente brunoNeri = new Cliente("Bruno", "Neri", ClienteTypesEnum.CELIACO, 329621945);
+        Cliente alfonsoLilla = new Cliente("Alfonso", "Lilla", ClienteTypesEnum.BASECARNE, 329735945);
+        Cliente alfredoFucsia = new Cliente("Alfredo", "Fucsia", ClienteTypesEnum.BASECARNE, 327773945);
+        Cliente lorenzoMarrone = new Cliente("Lorenzo", "Marrone", ClienteTypesEnum.CELIACO, 329665945);
+
+
+
+        /**
+         * Sezione dedicata allo sviluppo del metodo Prenota()
+         * in cui ogni cliente o gruppi di clienti possono prenotare i tavoli del ristorante grazie al metodo
+         * implementato nella classe cliente "prenota()"
+         */
+        System.out.println("---------------------------------------------------------------------------------------");
+        System.out.println("\n------------------------ PRENOTAZIONI -------------------------------------------------\n");
+
+        lucaRossi.prenota(lucaRossi, tavolo3);
+
+
+        System.out.println("\n---------------------------------------------------------------------------------------\n");
+
+
+        brunoNeri.prenota(brunoNeri, tavolo1);
+
+        /**
+         * Sezione dedicata allo sviluppo del metodo Ordina()
+         * in cui ogni cliente o gruppi di clienti possono ordinare le portate in base al menu da loro scelto.
+         * Metodo implementato nella classe cliente "ordina()"
+         */
+        System.out.println("\n------------------------ ORDINAZIONI --------------------------------------------------\n");
+
+
+        brunoNeri.ordina(brunoNeri, zucchineGrigliate);
+        lorenzoMarrone.ordina(lorenzoMarrone,gnocchiDiMiglio);
+
+        lucaRossi.ordina(lucaRossi, spaghettiAllaCarbonara);
+        marcoVerdi.ordina(marcoVerdi, grigliataVerdure);
+        federicoBianchi.ordina(federicoBianchi, croccoleSenzaGlutine);
+        alfonsoLilla.ordina(alfonsoLilla,grigliataDiCinghiale);
+        alfredoFucsia.ordina(alfredoFucsia,pappardelleAlRaguDiCinghiale);
+
+
+
+        System.out.println("\n---------------------------------------------------------------------------------------\n");
+
+
+        /**
+         * Raggruppamento di clienti classificato in base alla tipologia di menù scelto
+         */
+
+        clientiMenuBaseCarne.add(lucaRossi);
+        clientiMenuBaseCarne.add(alfonsoLilla);
+        clientiMenuBaseCarne.add(alfredoFucsia);
+
+        for(Cliente cliente : clientiMenuBaseCarne){
+            System.out.println("Le ordinazioni del "+ MenuTypesEnum.MENU_BASECARNE+" - "+cliente.datiCliente2());
+        }
+
+        clientiMenuGlutenFree.add(brunoNeri);
+        clientiMenuGlutenFree.add(lorenzoMarrone);
+
+        System.out.println("");
+        for(Cliente cliente : clientiMenuGlutenFree){
+            System.out.println("Le ordinazioni del "+ MenuTypesEnum.MENU_GLUTENFREE+" - "+cliente.datiCliente2());
+        }
 
     }
 }
