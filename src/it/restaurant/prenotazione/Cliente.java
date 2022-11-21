@@ -1,16 +1,29 @@
 package it.restaurant.prenotazione;
 
+import it.restaurant.Menu;
+import it.restaurant.portate.Portata;
 
+/**
+ * Creazione classe Cliente
+ */
 
 public class Cliente {
-
+    /**
+     * Inserite quattro variabili di istanza private
+     */
     private String nome;
     private String cognome;
     private ClienteTypesEnum tipologia;
+    private int numeroDiCellulare;
 
 
-    public int numeroDiCellulare;
-
+    /**
+     * Inserito metodo costruttore Parametrizzato con :
+     * @param nome
+     * @param cognome
+     * @param tipologia
+     * @param numeroDiCellulare
+     */
     public Cliente(String nome, String cognome, ClienteTypesEnum tipologia, int numeroDiCellulare) {
         this.nome = nome;
         this.cognome = cognome;
@@ -18,6 +31,11 @@ public class Cliente {
         this.numeroDiCellulare = numeroDiCellulare;
     }
 
+
+    /**
+     * Inserito metodi Get and Set per ogni variabile di istanza privata
+     * (Al momento trascurate ma che serviranno per ulteriori implementazioni del codice)
+     */
     public String getNome() {
         return nome;
     }
@@ -42,7 +60,7 @@ public class Cliente {
         this.numeroDiCellulare = numeroDiCellulare;
     }
 
-    public ClienteTypesEnum getTipologia() {
+    public ClienteTypesEnum getTipologia(ClienteTypesEnum clienteTypesEnum) {
         return tipologia;
     }
 
@@ -50,12 +68,34 @@ public class Cliente {
         this.tipologia = tipologia;
     }
 
-    public String datiCliente() {
-        return "Cliente: " + this.nome + " - " + this.cognome + " - " + this.numeroDiCellulare + " - " + this.tipologia;
+    /**
+     * Inserito metodo info che ci aiuterà a distinguere i clienti in base alla categoria
+     */
+    public void datiCliente() {
+        System.out.println("Cliente: " + this.nome + " - " + this.cognome + " - " + this.numeroDiCellulare);
+    }
+    public String datiCliente2(){
+        return "Cliente: " + this.nome + " - " + this.cognome + " - " + this.tipologia;
     }
 
+    /**
+     * Inserito metodo prenota che permetterà alla classe Cliente di richiamare la classe Tavolo
+     */
     public void prenota(Cliente cliente, Tavolo tavolo) {
-        System.out.println("Il "+ cliente.datiCliente()+ "\n" +"ha prenotato il "+  tavolo.infoTavolo());
+        if(tavolo.isFree() == true) {
+            System.out.println("Il " + cliente.datiCliente2() + "\n" + "ha prenotato il " + tavolo.infoTavolo());
+        }else {
+            System.out.println("Il tavolo è già prenotato.\nScegli un'altro tavolo");
+        }
     }
+
+    /**
+     * Inserito metodo prenota che permetterà alla classe Cliente di richiamare la classe Portata e tutte le sotto classi
+     */
+    public void ordina(Cliente cliente, Portata portata){
+        System.out.println("Il "+ cliente.datiCliente2()+ "\n"+"ha ordinato la "+ portata.portataInfo2()+"\n");
+    }
+
+
 
 }
