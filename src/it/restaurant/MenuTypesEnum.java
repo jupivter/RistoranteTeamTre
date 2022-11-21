@@ -1,11 +1,19 @@
-package it.restaurant;
 
+package it.restaurant;
+/**
+ * Creazione classe Enumerata MenuTypesEnum
+ * Che ci aiuta a differenziare i Menu per categorie
+ */
 public enum MenuTypesEnum {
 
-    VEGANO,
-    CARNE,
-    VEGETARIANO,
-    BAMBINO,
-    GLUTENFREE;
+    MENU_VEGANO,
+    MENU_BASECARNE,
+    MENU_VEGETARIANO,
+    MENU_BAMBINO,
+    MENU_GLUTENFREE,
+    MENU_DESSERT,
+    MENU_BEVANDE;
 
 }
+
+

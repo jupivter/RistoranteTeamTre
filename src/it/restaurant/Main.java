@@ -44,8 +44,8 @@ public class Main {
         menu.addPortata(new PrimoBambino("Farfalle con prosciutto e piselli al forno",8));
         menu.addPortata(new PrimoBambino("Vermicelli neri con pomodori",9));
 
-        menu.addPortata(new Secondo("Cotoletta",7.50));
-        menu.addPortata(new Secondo("Grigliata di cinghiale",13.60));
+        menu.addPortata(new SecondoBaseCarne("Cotoletta",7.50));
+        menu.addPortata(new SecondoBaseCarne("Grigliata di cinghiale",13.60));
         menu.addPortata(new SecondoVegetariano("Funghi ripieni non di tritato",10.40));
         menu.addPortata(new SecondoVegetariano("Zucchine grigliate",6.40));
         menu.addPortata(new SecondoVegano("Burger Vegani",8.40));
