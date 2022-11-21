@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="add Primi">
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoBambino.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoCeliaco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegetariano.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022_10_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022_10_33__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022_10_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022_10_59__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/Primo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoBaseCarne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoBambino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoBambino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoCeliaco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoCeliaco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegetariano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegetariano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/ClienteTypesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/ClienteTypesEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Dessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/MenuTypesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/MenuTypesEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Primo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/primi/Primo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/secondi/Secondo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/secondi/Secondo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/secondi/SecondoBambino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/secondi/SecondoBambino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/secondi/SecondoCeliaco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/secondi/SecondoCeliaco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/secondi/SecondoVegano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/secondi/SecondoVegano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/classes/secondi/SecondoVegetariano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/secondi/SecondoVegetariano.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +53,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dino_/IdeaProjects/RistoranteTeamTre&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "last_opened_file_path": "C:/Users/dino_/IdeaProjects/RistoranteTeamTre"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="RistoranteGitProject" />
