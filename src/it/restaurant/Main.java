@@ -2,7 +2,7 @@ package it.restaurant;
 
 import it.restaurant.portate.*;
 import it.restaurant.portate.primi.*;
-import it.restaurant.portate.secondi.*;
+
 import it.restaurant.prenotazione.Cliente;
 import it.restaurant.prenotazione.ClienteTypesEnum;
 import it.restaurant.prenotazione.Tavolo;
@@ -88,18 +88,18 @@ public class Main {
         Portata spaghettiAllaCarbonara = new PrimoBaseCarne("Primo", MenuTypesEnum.MENU_BASECARNE, "Spaghetti alla carbonara", 9);
         Portata pappardelleAlRaguDiCinghiale = new PrimoBaseCarne("Primo", MenuTypesEnum.MENU_BASECARNE, "Pappardelle al ragu di cinghiale", 11);
 
-        Portata cotoletta = new SecondoBaseCarne("Secondo", MenuTypesEnum.MENU_BASECARNE, "Cotoletta", 7.50);
-        Portata grigliataDiCinghiale = new SecondoBaseCarne("Secondo", MenuTypesEnum.MENU_BASECARNE, "Grigliata di cinghiale", 13.60);
+        Portata cotolettaBaby = new Secondi("Secondo",SecondiEnum.BAMBINO,MenuTypesEnum.MENU_BAMBINO,"CotolettaBaby",7.50);
+        Portata grigliataVegetariana = new Secondi("Secondo",SecondiEnum.VEGETARIANO,MenuTypesEnum.MENU_VEGETARIANO,"Grigliata di verdure",23.50);
 
         menuBaseCarne.add(spaghettiAllaCarbonara);
         menuBaseCarne.add(pappardelleAlRaguDiCinghiale);
-        menuBaseCarne.add(cotoletta);
-        menuBaseCarne.add(grigliataDiCinghiale);
+        menuBaseCarne.add(cotolettaBaby);
+        menuBaseCarne.add(grigliataVegetariana);
 
         spaghettiAllaCarbonara.portataInfo();
         pappardelleAlRaguDiCinghiale.portataInfo();
-        cotoletta.portataInfo();
-        grigliataDiCinghiale.portataInfo();
+        cotolettaBaby.portataInfo();
+        grigliataVegetariana.portataInfo();
 
         /**
          * Creazione Oggetti Primo e Secondo
@@ -112,8 +112,8 @@ public class Main {
         Portata carbonaraDiZucchine = new PrimoVegetariano("Primo", MenuTypesEnum.MENU_VEGETARIANO, "Carbonara di zucchine", 8.5);
         Portata trofieAllaCremaDiPestoEnoci = new PrimoVegetariano("Primo", MenuTypesEnum.MENU_VEGETARIANO, "Trofie alla crema di pesto e noci", 11.50);
 
-        Portata funghiRipieniNonDiTritato = new SecondoVegetariano("Secondo", MenuTypesEnum.MENU_VEGETARIANO, "Funghi ripieni non di tritato", 10.40);
-        Portata zucchineGrigliate = new SecondoVegetariano("Secondo", MenuTypesEnum.MENU_VEGETARIANO, "Zucchine grigliate", 6.40);
+        Portata funghiRipieniNonDiTritato = new Secondi("Secondo",SecondiEnum.VEGETARIANO, MenuTypesEnum.MENU_VEGETARIANO, "Funghi ripieni non di tritato", 10.40);
+        Portata zucchineGrigliate = new Secondi("Secondo",SecondiEnum.VEGETARIANO, MenuTypesEnum.MENU_VEGETARIANO, "Zucchine grigliate", 6.40);
 
         menuVegetariano.add(carbonaraDiZucchine);
         menuVegetariano.add(trofieAllaCremaDiPestoEnoci);
@@ -138,8 +138,8 @@ public class Main {
         Portata risottoCastgneEcatalogna = new PrimoVegano("Primo", MenuTypesEnum.MENU_VEGANO, "Risotto castagne e catalogna", 14);
         Portata casoncelliAllaBergamasca = new PrimoVegano("Primo", MenuTypesEnum.MENU_VEGANO, "Casoncelli alla bergamasca", 13);
 
-        Portata burgerVegani = new SecondoVegano("Secondo", MenuTypesEnum.MENU_VEGANO, "Burger Vegani", 8.40);
-        Portata grigliataVerdure = new SecondoVegano("Secondo", MenuTypesEnum.MENU_VEGANO, "Grigliata Verdure", 9.80);
+        Portata burgerVegani = new Secondi("Secondo",SecondiEnum.VEGANO, MenuTypesEnum.MENU_VEGANO, "Burger Vegani", 8.40);
+        Portata grigliataVerdure = new Secondi("Secondo",SecondiEnum.VEGANO, MenuTypesEnum.MENU_VEGANO, "Grigliata Verdure", 9.80);
 
         menuVegano.add(risottoCastgneEcatalogna);
         menuVegano.add(casoncelliAllaBergamasca);
@@ -164,8 +164,8 @@ public class Main {
         Portata tagliatelleDiGranoSaraceno = new PrimoCeliaco("Primo", MenuTypesEnum.MENU_GLUTENFREE, "Tagliatelle di grano saraceno con ragu di prosciutto crudo", 12.50);
         Portata gnocchiDiMiglio = new PrimoCeliaco("Primo", MenuTypesEnum.MENU_GLUTENFREE, "Gnocchi di miglio con asparagi e pancetta", 13.50);
 
-        Portata burgerDiMerluzzo = new SecondoCeliaco("Secondo", MenuTypesEnum.MENU_GLUTENFREE, "Burger di Merluzzo", 15.40);
-        Portata croccoleSenzaGlutine = new SecondoCeliaco("Secondo", MenuTypesEnum.MENU_GLUTENFREE, "Croccole senza Glutine ", 5.40);
+        Portata burgerDiMerluzzo = new Secondi("Secondo",SecondiEnum.CELIACO, MenuTypesEnum.MENU_GLUTENFREE, "Burger di Merluzzo", 15.40);
+        Portata croccoleSenzaGlutine = new Secondi("Secondo",SecondiEnum.CELIACO, MenuTypesEnum.MENU_GLUTENFREE, "Croccole senza Glutine ", 5.40);
 
         menuGlutenFree.add(tagliatelleDiGranoSaraceno);
         menuGlutenFree.add(gnocchiDiMiglio);
@@ -189,8 +189,8 @@ public class Main {
         Portata farfalleConProsciutto = new PrimoBambino("Primo", MenuTypesEnum.MENU_BAMBINO, "Farfalle con prosciutto e piselli al forno", 8);
         Portata vermicelliNeri = new PrimoBambino("Primo", MenuTypesEnum.MENU_BAMBINO, "Vermicelli neri con pomodori", 9);
 
-        Portata cotolettaPanata = new SecondoBambino("Secondo", MenuTypesEnum.MENU_BAMBINO, "Cotoletta Panata", 6.40);
-        Portata pizzaBaby = new SecondoBambino("Secondo", MenuTypesEnum.MENU_BAMBINO, "Pizza Baby", 8.50);
+        Portata cotolettaPanata = new Secondi("Secondo",SecondiEnum.BAMBINO, MenuTypesEnum.MENU_BAMBINO, "Cotoletta Panata", 6.40);
+        Portata pizzaBaby = new Secondi("Secondo",SecondiEnum.BAMBINO, MenuTypesEnum.MENU_BAMBINO, "Pizza Baby", 8.50);
 
         menuBambino.add(farfalleConProsciutto);
         menuBambino.add(vermicelliNeri);
@@ -312,7 +312,7 @@ public class Main {
         lucaRossi.ordina(lucaRossi, spaghettiAllaCarbonara);
         marcoVerdi.ordina(marcoVerdi, grigliataVerdure);
         federicoBianchi.ordina(federicoBianchi, croccoleSenzaGlutine);
-        alfonsoLilla.ordina(alfonsoLilla,grigliataDiCinghiale);
+        alfonsoLilla.ordina(alfonsoLilla,grigliataVegetariana);
         alfredoFucsia.ordina(alfredoFucsia,pappardelleAlRaguDiCinghiale);
 
 
