@@ -65,6 +65,6 @@ public class Tavolo {
      * @return
      */
     public String infoTavolo() {
-        return "Tavolo : "+" Numero tavolo: "+ numeroTavolo + " - Numero posti tavolo: " + numeroPostoTavolo + " - Dispinibilita del tavolo : " + isFree;
+        return "Tavolo : "+" Numero tavolo: "+ numeroTavolo + " - Numero posti tavolo: " + numeroPostoTavolo + " - Dispinibilita del tavolo : " + isFree();
     }
 }

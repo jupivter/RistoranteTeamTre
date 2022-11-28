@@ -1,8 +1,4 @@
 
-
-O.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022_10_33__Changes_.xml,5\e\5e24cbe8befe077db8b0795ce0722013dfbd1455
-
-O.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2022_10_59__Changes_.xml,a\6\a6d79bbf23be8ee670c2ff7cbfef3d51d2e34518
 a
 1src/it/restaurant/portate/primi/PrimoBambino.java,a\a\aa70822c89d7fa5f0f7e9c6f3c0c10b3ec2b50e4
 c
@@ -13,7 +9,3 @@ a
 0src/it/restaurant/portate/primi/PrimoVegano.java,a\b\ab1d9ee75b4b15988f3f7d5baf80d0f8e824799c
 e
 5src/it/restaurant/portate/primi/PrimoVegetariano.java,0\8\08be2e3028fb078097799a854c003bea1b9bbb58
-e
-5src/it/restaurant/portate/secondi/SecondoBambino.java,e\e\ee89cf00c9aac5025a80a856a3132a883cea63b6
-g
-7src/it/restaurant/portate/secondi/SecondoBaseCarne.java,c\6\c6d91635bea7f7676670a4efad797c8e38a810dd

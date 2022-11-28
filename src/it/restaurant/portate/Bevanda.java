@@ -7,8 +7,8 @@ import it.restaurant.MenuTypesEnum;
  */
 
 public class Bevanda extends Portata {
-    public Bevanda(String tipologia, MenuTypesEnum menuTypesEnum, String name, double price) {
-        super(tipologia, menuTypesEnum, name, price);
+    public Bevanda(String name, double price) {
+        super(name, price);
     }
 
 }

@@ -1,39 +1,15 @@
 package it.restaurant.portate;
 
-import it.restaurant.Menu;
-import it.restaurant.MenuTypesEnum;
-/**
- * Creazione classe padre Portata estesa alla classe padre Menu
- * Con implementazione di costruttore
- */
-public class Portata extends Menu {
-    /**
-     * Inserite due variabili di istanza private
-     */
-    private String tipologia;
+public class Portata {
+
     private String name;
     private double price;
 
-    /**
-     * Inserito metodo costruttore classe figlio con super della classe padre Menu
-     * Parametrizzato con :
-     *
-     * @param menuTypesEnum
-     * @param name
-     * @param price
-     */
-    public Portata(String tipologia, MenuTypesEnum menuTypesEnum, String name, double price) {
-        super(menuTypesEnum);
-        this.tipologia = tipologia;
+    public Portata(String name, double price) {
         this.name = name;
         this.price = price;
-
     }
 
-    /**
-     * Inserito metodi Get and Set per ogni variabile di istanza privata
-     * (Al momento trascurate ma che serviranno per ulteriori implementazioni del codice)
-     */
     public String getName() {
         return name;
     }
@@ -50,15 +26,9 @@ public class Portata extends Menu {
         this.price = price;
     }
 
-    /**
-     * Inserito metodo info che ci aiuterà a vedere le caratteristiche di ogni portata ed a quale menu viene associato
-     */
-
-    public void portataInfo() {
-        System.out.println("Portata : " + this.tipologia + " - " + this.name + " - " + this.price + " euro - " + getMenuTypesEnum());
+    public String printPortataDetails() {
+        return name + " - " + String.format("%.2f", price) + " euro";
     }
 
-    public String portataInfo2() {
-        return "Portata : " + this.tipologia + " - " + this.name + " - " + this.price + " euro - " + getMenuTypesEnum();
-    }
+
 }

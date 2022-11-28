@@ -6,13 +6,11 @@ package it.restaurant;
  */
 public enum MenuTypesEnum {
 
-    MENU_VEGANO,
-    MENU_BASECARNE,
-    MENU_VEGETARIANO,
-    MENU_BAMBINO,
-    MENU_GLUTENFREE,
-    MENU_DESSERT,
-    MENU_BEVANDE;
+    VEGANO,
+    BASECARNE,
+    VEGETARIANO,
+    BAMBINO,
+    GLUTENFREE;
 
 }
 
