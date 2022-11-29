@@ -1,7 +1,9 @@
 package it.restaurant.portate;
-import it.restaurant.MenuTypesEnum;
+/**
+ * Creazione classe figlio Dessert estesa alla classe padre Portata
+ * Con implementazione di costruttore
+ */
 public class Dessert extends Portata{
-
 
     public Dessert(String name, double price) {
         super(name, price);

@@ -1,6 +1,9 @@
 package it.restaurant.portate;
 
-import it.restaurant.MenuTypesEnum;
+/**
+ * Creazione classe figlio Secondi estesa alla classe padre Portata
+ * Con implementazione di costruttore
+ */
 
 public class Secondi extends Portata{
 

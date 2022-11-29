@@ -1,7 +1,5 @@
 package it.restaurant.portate;
-import it.restaurant.MenuTypesEnum;
 
-import it.restaurant.portate.Portata;
 
 /**
  * Creazione classe figlio Primi estesa alla classe padre Portata

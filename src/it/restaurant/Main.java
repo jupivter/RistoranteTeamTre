@@ -12,6 +12,7 @@ public class Main {
 
         Menu menu = new Menu(MenuTypesEnum.BASECARNE);
 
+
         Cliente cliente1 = new Cliente("Luca", "Rossi", 327302658);
         Cliente cliente2 = new Cliente("Marco", "Verdi", 328302568);
 
@@ -37,9 +38,11 @@ public class Main {
         menu.addPortata(new Dessert("Cannolo Scomposto", 4.50));
 
 
+
         ristorante.printRistoranteInfo();
 
         menu.printMenuDetails();
+
 
 
         System.out.println("-----------------------------AREA_PRENOTAZIONE-------------------------------------");

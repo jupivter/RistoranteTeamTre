@@ -4,28 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/PrimiEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Christian: ripristino Backup del 16 novembre + modifiche varie">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/MenuTypesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/MenuTypesEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Dessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Dessert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Primi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Primi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Secondi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Secondi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/SecondiEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/SecondiEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoBambino.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoBaseCarne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Primi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoCeliaco.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegano.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/primi/PrimoVegetariano.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/ClienteTypesEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +53,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dino_/IdeaProjects/RistoranteTeamTre&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.restaurant.portate" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="RistoranteGitProject" />
@@ -118,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669047008707</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Christian: ripristino Backup del 16 novembre + modifiche varie">
+      <created>1669658841335</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669658841335</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +148,7 @@
     <MESSAGE value="correzione progetto" />
     <MESSAGE value="add Primi" />
     <MESSAGE value="Modifiche varie Christian" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie Christian" />
+    <MESSAGE value="Christian: ripristino Backup del 16 novembre + modifiche varie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Christian: ripristino Backup del 16 novembre + modifiche varie" />
   </component>
 </project>

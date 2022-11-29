@@ -40,7 +40,7 @@ public class Menu {
     public void printMenuDetails(){
         System.out.println("Menu: " + menuTypesEnum);
         for(Portata portata : portateList){
-            portata.printPortataDetails();
+            System.out.println(portata.printPortataDetails());;
         }
     }
     public void addPortata(Portata portata){
