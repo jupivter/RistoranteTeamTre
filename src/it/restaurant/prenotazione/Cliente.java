@@ -1,5 +1,6 @@
 package it.restaurant.prenotazione;
 
+import it.restaurant.TypesEnum;
 import it.restaurant.portate.Portata;
 
 /**
@@ -13,6 +14,8 @@ public class Cliente {
     private String nome;
     private String cognome;
     private int numeroDiCellulare;
+
+    private TypesEnum menuTypesEnum;
 
 
     /**
@@ -67,6 +70,7 @@ public class Cliente {
     /**
      * Inserito metodo prenota che permetterà alla classe Cliente di richiamare la classe Tavolo
      */
+    //TODO dobbiamo memmorizzare da qualche parte le prenotazione
     public void prenota(Cliente cliente, Tavolo tavolo) {
         if(tavolo.isFree() == true) {
             System.out.println("Il " + cliente.datiCliente() + "\n" + "ha prenotato il " + tavolo.infoTavolo());

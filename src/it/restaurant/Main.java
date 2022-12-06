@@ -7,15 +7,18 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //TODO il menù a che serve così se non è agganciato a un ristorante ?
         Ristorante ristorante = new Ristorante("Il ghiottone", "Via Indipendenza, 4",
                 "63733020363", "ilghiottone@gmail.com");
 
-        Menu menu = new Menu(MenuTypesEnum.BASECARNE);
+        Menu menu = new Menu(TypesEnum.BASECARNE);
 
 
-        Cliente cliente1 = new Cliente("Luca", "Rossi", 327302658);
+        //TODO sistemare il tutto come ne abbiamo discusso alla call
+        Cliente cliente1 = new Cliente("Luca", "Rossi", 327302658, TypesEnum.VEGANO);
         Cliente cliente2 = new Cliente("Marco", "Verdi", 328302568);
 
+        //TODO isFree è usato in modo ambiguo, allora di default è true?
         Tavolo tavolo1 = new Tavolo(4, 4, true);
         Tavolo tavolo2 = new Tavolo(10, 8, true);
 

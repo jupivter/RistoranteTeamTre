@@ -7,25 +7,25 @@ import java.util.List;
 
 public class Menu {
 
-    private MenuTypesEnum menuTypesEnum;
+    private TypesEnum menuTypesEnum;
     private List<Portata> portateList;
 
 
-    public Menu(MenuTypesEnum menuTypesEnum){
+    public Menu(TypesEnum menuTypesEnum){
         this.menuTypesEnum = menuTypesEnum;
         portateList = new ArrayList<>();
     }
 
-    public Menu(MenuTypesEnum menuTypesEnum, List <Portata> portate){
+    public Menu(TypesEnum menuTypesEnum, List <Portata> portate){
         this.menuTypesEnum = menuTypesEnum;
         this.portateList = portate;
     }
 
-    public MenuTypesEnum getMenuTypesEnum() {
+    public TypesEnum getMenuTypesEnum() {
         return menuTypesEnum;
     }
 
-    public void setMenuTypesEnum(MenuTypesEnum menuTypesEnum) {
+    public void setMenuTypesEnum(TypesEnum menuTypesEnum) {
         this.menuTypesEnum = menuTypesEnum;
     }
 
@@ -37,6 +37,8 @@ public class Menu {
         this.portateList = portateList;
     }
 
+
+    //TODO la stampa deve venir fatta dentro printPortataDetail
     public void printMenuDetails(){
         System.out.println("Menu: " + menuTypesEnum);
         for(Portata portata : portateList){
