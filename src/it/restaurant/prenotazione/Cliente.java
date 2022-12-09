@@ -1,7 +1,6 @@
 package it.restaurant.prenotazione;
 
-import it.restaurant.TypesEnum;
-import it.restaurant.portate.Portata;
+import it.restaurant.portate.CategoriesEnum;
 
 /**
  * Creazione classe Cliente
@@ -15,7 +14,7 @@ public class Cliente {
     private String cognome;
     private int numeroDiCellulare;
 
-    private TypesEnum menuTypesEnum;
+    private CategoriesEnum menuTypesEnum;
 
 
     /**

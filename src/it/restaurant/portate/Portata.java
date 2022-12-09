@@ -36,8 +36,8 @@ public class Portata {
     /**
      * Metodo printPortataDetails() che ci stamperà tutte le info delle varie portate
      */
-    public void printPortataDetails() {
-        System.out.println("Dettagli della portata: " + name + " - " + price);
+    public void stampaDettagli() {
+        System.out.println("Nome : " + name + " - " + price);
     }
 
 

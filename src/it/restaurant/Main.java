@@ -16,5 +16,12 @@ public class Main {
         ristorante.getTavolo();
         ristorante.aggiungiTavolo(1, tavolo1);
         tavolo1.infoTavolo();
+
+        Piatto formaggi= new Piatto("Tagliere di formaggi",17.50,TypesPiattiEnum.PRIMI,CategoriesEnum.VEGETARIANO);
+        Bevanda cosmopolitan = new Bevanda("Cosmopolitan", 8.50,true,false);
+        cosmopolitan.stampaDettagli();
+        formaggi.stampaDettagli();
+
+
     }
 }
