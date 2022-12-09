@@ -1,6 +1,10 @@
 
 package it.restaurant;
 
+import it.restaurant.prenotazione.Tavolo;
+
+import java.util.HashMap;
+
 /**
  * Creazione classe Ristorante
  */
@@ -13,6 +17,9 @@ public class Ristorante {
     private String address;
     private String phoneNumber;
     private String email;
+
+    //al posto di integer potremmo mettere una lista di clienti, con tavolo per chiave ("questo tavolo è occupato da questo gruppo di clienti")
+    private HashMap<Integer, Tavolo> tavoli = new HashMap<>();
 
     /**
      * Inserito metodo costruttore Parametrizzato con :
@@ -40,15 +47,56 @@ public class Ristorante {
         this.name = name;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public HashMap<Integer, Tavolo> getTavolo() {
+        return tavoli;
+    }
+
+    public void setTavolo(HashMap<Integer, Tavolo> tavoli) {
+        this.tavoli = tavoli;
+    }
+
     /**
      * Inserito metodo info che ci aiuterà a vedere le varie info del ristorante
      */
     public void printRistoranteInfo(){
-        System.out.println("Dati ristorante: " + name + " - " + address + " - " + phoneNumber + " - " + email +
-                "\n============================================================================================");
+        System.out.println("Dati ristorante: " + name + " - " + address + " - " + phoneNumber + " - " + email);
     }
 
+    public void aggiungiTavolo(Integer numero, Tavolo tavolo){
+        tavoli.put(numero, tavolo);
+    }
 
+    public void rimuoviTavolo(Integer numero, Tavolo tavolo) {
+        tavoli.put(numero, tavolo);
+    }
+
+    public Tavolo getTavoloByNumber(int numero){
+        return tavoli.get(numero);
+    }
 }
 
 

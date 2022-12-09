@@ -37,14 +37,6 @@ public class Menu {
         this.portateList = portateList;
     }
 
-
-    //TODO la stampa deve venir fatta dentro printPortataDetail
-    public void printMenuDetails(){
-        System.out.println("Menu: " + menuTypesEnum);
-        for(Portata portata : portateList){
-            System.out.println(portata.printPortataDetails());;
-        }
-    }
     public void addPortata(Portata portata){
         portateList.add(portata);
     }

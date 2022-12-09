@@ -70,22 +70,21 @@ public class Cliente {
     /**
      * Inserito metodo prenota che permetterà alla classe Cliente di richiamare la classe Tavolo
      */
-    //TODO dobbiamo memmorizzare da qualche parte le prenotazione
-    public void prenota(Cliente cliente, Tavolo tavolo) {
+    //TODO dobbiamo memorizzare da qualche parte le prenotazione
+
+    private String prenotazione;
+    /*public void prenota(Cliente cliente, Tavolo tavolo) {
         if(tavolo.isFree() == true) {
             System.out.println("Il " + cliente.datiCliente() + "\n" + "ha prenotato il " + tavolo.infoTavolo());
         }else {
             System.out.println("Il tavolo è già prenotato.\nScegli un'altro tavolo");
         }
-    }
+    }*/
 
     /**
      * Inserito metodo prenota che permetterà alla classe Cliente di richiamare la classe Portata e tutte le sotto classi
      */
-    public void ordina(Cliente cliente, Portata portata){
+    /*public void ordina(Cliente cliente, Portata portata){
         System.out.println("Il "+ cliente.datiCliente()+ "\n"+"ha ordinato la "+ portata.printPortataDetails()+"\n");
-    }
-
-
-
+    }*/
 }

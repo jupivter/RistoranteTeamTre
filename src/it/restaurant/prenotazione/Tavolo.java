@@ -7,18 +7,18 @@ public class Tavolo {
     /**
      * Inserite tre variabili di istanza private
      */
-    private int numeroPostoTavolo;
+    private int numeroPostiTavolo;
     private int numeroTavolo;
     private boolean isFree;
 
     /**
      * Inserito metodo costruttore Parametrizzato con :
-     * @param numeroPostoTavolo
+     * @param numeroPostiTavolo
      * @param numeroTavolo
      * @param isFree
      */
-    public Tavolo(int numeroPostoTavolo, int numeroTavolo, boolean isFree){
-        this.numeroPostoTavolo = numeroPostoTavolo;
+    public Tavolo(int numeroPostiTavolo, int numeroTavolo, boolean isFree){
+        this.numeroPostiTavolo = numeroPostiTavolo;
         this.numeroTavolo = numeroTavolo;
         this.isFree = isFree;
     }
@@ -28,11 +28,11 @@ public class Tavolo {
      * (Al momento trascurate ma che serviranno per ulteriori implementazioni del codice)
      */
     public int getNumeroPostoTavolo() {
-        return numeroPostoTavolo;
+        return numeroPostiTavolo;
     }
 
     public void setNumeroPostoTavolo(int numeroPostoTavolo) {
-        this.numeroPostoTavolo = numeroPostoTavolo;
+        this.numeroPostiTavolo = numeroPostoTavolo;
     }
 
     public int getNumeroTavolo() {
@@ -64,7 +64,7 @@ public class Tavolo {
      * Inserimento metodo infoTavolo() che ci aiuterà a vedere il numero del tavolo la capienza e la disponibilità
      * @return
      */
-    public String infoTavolo() {
-        return "Tavolo : "+" Numero tavolo: "+ numeroTavolo + " - Numero posti tavolo: " + numeroPostoTavolo + " - Dispinibilita del tavolo : " + isFree();
+    public void infoTavolo() {
+        System.out.println("Numero tavolo: "+ numeroTavolo + " - " +  "Numero posti tavolo: " + numeroPostiTavolo + " - " + "Dispinibilita del tavolo: " + isFree());
     }
 }
