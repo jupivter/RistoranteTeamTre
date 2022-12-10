@@ -1,5 +1,6 @@
 package it.restaurant;
 
+import it.restaurant.portate.CategoriesEnum;
 import it.restaurant.portate.Portata;
 
 import java.util.ArrayList;
@@ -7,25 +8,25 @@ import java.util.List;
 
 public class Menu {
 
-    private MenuTypesEnum menuTypesEnum;
+    private CategoriesEnum menuTypesEnum;
     private List<Portata> portateList;
 
 
-    public Menu(MenuTypesEnum menuTypesEnum){
+    public Menu(CategoriesEnum menuTypesEnum){
         this.menuTypesEnum = menuTypesEnum;
         portateList = new ArrayList<>();
     }
 
-    public Menu(MenuTypesEnum menuTypesEnum, List <Portata> portate){
+    public Menu(CategoriesEnum menuTypesEnum, List <Portata> portate){
         this.menuTypesEnum = menuTypesEnum;
         this.portateList = portate;
     }
 
-    public MenuTypesEnum getMenuTypesEnum() {
+    public CategoriesEnum getMenuTypesEnum() {
         return menuTypesEnum;
     }
 
-    public void setMenuTypesEnum(MenuTypesEnum menuTypesEnum) {
+    public void setMenuTypesEnum(CategoriesEnum menuTypesEnum) {
         this.menuTypesEnum = menuTypesEnum;
     }
 
@@ -37,12 +38,6 @@ public class Menu {
         this.portateList = portateList;
     }
 
-    public void printMenuDetails(){
-        System.out.println("Menu: " + menuTypesEnum);
-        for(Portata portata : portateList){
-            System.out.println(portata.printPortataDetails());;
-        }
-    }
     public void addPortata(Portata portata){
         portateList.add(portata);
     }
