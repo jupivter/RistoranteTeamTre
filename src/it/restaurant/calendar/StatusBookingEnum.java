@@ -4,22 +4,22 @@ public enum StatusBookingEnum {
     SUCCESS,
     NOT_SUCCESS;
 
-    private StatusInfoEnum info;
+    private StatusBookingInfoEnum info;
 
 
     private StatusBookingEnum () {
-        this.info = StatusInfoEnum.NO_INFO;
+        this.info = StatusBookingInfoEnum.NO_INFO;
     }
 
-    public StatusInfoEnum getInfo() {
+    public StatusBookingInfoEnum getInfo() {
         return info;
     }
 
-    public void setInfo(StatusInfoEnum info) {
+    public void setInfo(StatusBookingInfoEnum info) {
         this.info = info;
     }
 
-    public StatusBookingEnum setInfoAndGetStatus (StatusInfoEnum info) {
+    public StatusBookingEnum setInfoAndGetStatus (StatusBookingInfoEnum info) {
         this.info = info;
         return this;
     }

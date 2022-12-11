@@ -3,9 +3,6 @@ package it.restaurant;
 
 import it.restaurant.prenotazione.Tavolo;
 import it.restaurant.utility.Comparators;
-
-
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeSet;

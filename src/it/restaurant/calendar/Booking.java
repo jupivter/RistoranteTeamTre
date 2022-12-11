@@ -2,7 +2,6 @@ package it.restaurant.calendar;
 
 import it.restaurant.prenotazione.Cliente;
 import it.restaurant.prenotazione.Tavolo;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

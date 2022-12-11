@@ -63,7 +63,7 @@ public class CalendarBookings {
 
     private StatusBookingEnum addBooking (List<Cliente> clientsList, LocalDate date, LocalTime time, long rangeTime, Tavolo table) {
         LocalDateTime dateTime = LocalDateTime.of(date,time);
-        if(!checkDateInCalendar(date)) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusInfoEnum.DATE_OUT_OF_CALENDAR);
+        if(!checkDateInCalendar(date)) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusBookingInfoEnum.DATE_OUT_OF_CALENDAR);
         bookingsMap.get(date).add(new Booking(clientsList,dateTime,rangeTime,table));
         return StatusBookingEnum.SUCCESS;
     }
@@ -75,7 +75,7 @@ public class CalendarBookings {
         int peopleNumber = clientsList.size();
         Set<Tavolo> overlappingTables = getTablesOverlappingTime(date,time,rangeTime);
         TreeSet<Tavolo> freeTables = restaurant.getFreeTableFromTakenTables(overlappingTables,peopleNumber);
-        if(freeTables.isEmpty()) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusInfoEnum.NO_FREE_TABLES);
+        if(freeTables.isEmpty()) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusBookingInfoEnum.NO_FREE_TABLES);
         return addBooking(clientsList,date,time,rangeTime,freeTables.first());
     }
 
