@@ -27,11 +27,11 @@ public class Tavolo {
      * Inserito metodi Get and Set per ogni variabile di istanza privata
      * (Al momento trascurate ma che serviranno per ulteriori implementazioni del codice)
      */
-    public int getNumeroPostoTavolo() {
+    public int getNumeroPostiTavolo() {
         return numeroPostiTavolo;
     }
 
-    public void setNumeroPostoTavolo(int numeroPostoTavolo) {
+    public void setNumeroPostiTavolo(int numeroPostoTavolo) {
         this.numeroPostiTavolo = numeroPostoTavolo;
     }
 

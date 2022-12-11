@@ -1,7 +1,6 @@
 package it.restaurant;
 
 import it.restaurant.portate.*;
-import it.restaurant.prenotazione.Cliente;
 import it.restaurant.prenotazione.Tavolo;
 
 public class Main {
@@ -13,7 +12,7 @@ public class Main {
 
         Tavolo tavolo1 = new Tavolo(4, 1, true);
 
-        ristorante.getTavolo();
+        ristorante.getTavoli();
         ristorante.aggiungiTavolo(1, tavolo1);
         tavolo1.infoTavolo();
 

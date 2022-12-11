@@ -4,27 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Christian: ripristino Backup del 16 novembre + modifiche varie">
+    <list default="true" id="a35c40b9-fcfd-4b4b-badf-7dd5e9f21347" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/StatusBookingEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/StatusInfoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/TestCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPiattiEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/TypesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/CategoriesEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Dessert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Primi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/PrimiEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Secondi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/SecondiEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" afterDir="false" />
->>>>>>> 643d8c1ff9c0d402476bafe7cc03b1835f1b82ed
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,27 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "C:/Users/g92/OneDrive/Desktop/Develhope/TEAM_3_PROJECT/RistoranteTeamTre",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
-  }
-<<<<<<< HEAD
-}]]></component>
+  <component name="PropertiesComponent">&quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/g92/OneDrive/Desktop/Develhope/TEAM_3_PROJECT/RistoranteTeamTre&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.restaurant.portate" />
     </key>
   </component>
-=======
-}</component>
->>>>>>> 643d8c1ff9c0d402476bafe7cc03b1835f1b82ed
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="RistoranteGitProject" />
@@ -161,5 +146,21 @@
     <MESSAGE value="add Primi" />
     <MESSAGE value="Modifiche varie Christian" />
     <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie Christian" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
