@@ -72,5 +72,13 @@ public class Booking {
                 "\n People number: " + clientsList.size() +
                 "\n Table: " + table.getNumeroTavolo() ;
     }
+    /*
+    @Override
+    public int compareTo(Booking booking) {
+        if(this == booking) return 0;
+        if(this.getTime().isBefore(booking.getTime())) return -1;
+        else  return 1;
+    }
 
+     */
 }

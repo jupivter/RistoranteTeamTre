@@ -11,7 +11,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static java.util.Map.entry;
+
 
 public class CalendarBookings {
 
@@ -47,13 +47,12 @@ public class CalendarBookings {
         this.minRangeBetweenBookings = minRangeBetweenBookings;
     }
 
-    // METODO PER ATTIVARE UN INTERVALLO DI GIORNI
 
     public void activateIntervalFromDate (LocalDate startDate, int numberOfDays) {
         for(int i=0; i<numberOfDays; i++) {
             LocalDate nextDay = startDate.plusDays(i);
-            if(bookingsMap.keySet().contains(nextDay)) continue;
-            bookingsMap.put(nextDay,new TreeSet<>(Comparators.getCompareBookingsByDay()));
+            if(bookingsMap.containsKey(nextDay)) continue;
+            bookingsMap.put(nextDay, new TreeSet<>(Comparators.getCompareBookingsByDay()));
         }
     }
 
@@ -61,7 +60,6 @@ public class CalendarBookings {
         return date.isBefore(bookingsMap.firstKey()) || date.isAfter(bookingsMap.lastKey()) ?  false : true;
     }
 
-    //METODO PER AGGIUNGERE PRENOTAZIONI
 
     private StatusBookingEnum addBooking (List<Cliente> clientsList, LocalDate date, LocalTime time, long rangeTime, Tavolo table) {
         LocalDateTime dateTime = LocalDateTime.of(date,time);
@@ -71,8 +69,6 @@ public class CalendarBookings {
     }
 
 
-
-    // METODO PER PRENOTARE
 
     public synchronized StatusBookingEnum bookTable (List<Cliente> clientsList, LocalDate date, LocalTime time, long rangeTime) {
         if(rangeTime<minRangeBetweenBookings) rangeTime = minRangeBetweenBookings;
@@ -87,6 +83,7 @@ public class CalendarBookings {
         return bookTable(clientsList,date,time,minRangeBetweenBookings);
     }
 
+    // cancellare questo metodo ???
     private Set<Tavolo> getTablesOverlappingTime (LocalDate date, LocalTime time, long rangeTime){
         return getBookingsOverlappingTime(date,time,rangeTime).stream().map(Booking::getTable).collect(Collectors.toSet());
     }
@@ -95,42 +92,74 @@ public class CalendarBookings {
     private TreeSet<Booking> getBookingsOverlappingTime (LocalDate date, LocalTime time, long rangeTime){
         TreeSet <Booking> overlappingBookings = new TreeSet<>(Comparators.getCompareBookingsByDay());
         TreeSet <Booking> dayBookingsSet = bookingsMap.get(date);
-        TreeSet <LocalTime> dayBookingsTimesSet = new TreeSet<>(dayBookingsSet.stream().map(booking -> booking.getTime()).collect(Collectors.toSet()));
         long distanceTime = 0;
-        LocalTime nextTime = time;
-        while(distanceTime < rangeTime){
-            nextTime = dayBookingsTimesSet.higher(nextTime);
-            if(nextTime == null) break;
-            distanceTime = Math.abs(ChronoUnit.MINUTES.between(time,nextTime));
-            if(distanceTime < rangeTime) overlappingBookings.add(dayBookingsSet.get(nextTime));
-        }
-        LocalTime previusTime = time;
-        while(previusTime!=null){
-            previusTime = dayBookingsMap.lowerKey(previusTime);
-            if(previusTime == null) break;
-            distanceTime = Math.abs(ChronoUnit.MINUTES.between(time,previusTime));
-            Booking booking = dayBookingsMap.get(previusTime);
-            if(distanceTime < dayBookingsMap.get(previusTime).getRangeTime()) overlappingBookings.add(dayBookingsMap.get(previusTime));
-        }
+        for(Booking booking : dayBookingsSet){
+            LocalTime bookingTime = booking.getTime();
+            distanceTime = Math.abs(ChronoUnit.MINUTES.between(time,bookingTime));
+            if(bookingTime.equals(time)){
+                overlappingBookings.add(booking);
+            }
+            else if(bookingTime.isAfter(time)) {
+                if(distanceTime < rangeTime) overlappingBookings.add(booking);
+            }
+            else
+                if(distanceTime < booking.getRangeTime()) overlappingBookings.add(booking);
+            }
         return overlappingBookings;
     }
 
+    public void resetBookingsMap () {
+        this.bookingsMap = new TreeMap<>();
+    }
 
-    public String getDetails () {
+
+    public String getDetailsOfDate (LocalDate date) {
         String str = "";
-        for(LocalDate date : bookingsMap.keySet()){
+        str += "\nBookings of " +  date + " : \n" ;
+        if(bookingsMap.get(date).isEmpty())
+            str += " No bookings for this date\n";
+        else
+            for(Booking booking : bookingsMap.get(date))
+                str += booking.getDetails() .indent(-1)+ "\n";
+        return str;
+    }
+
+    public String getDetailsBetweenTwoDates (LocalDate startDate, LocalDate endDate) {
+        SortedMap <LocalDate,TreeSet<Booking>> subMap =  bookingsMap.subMap(startDate,true,endDate,true);
+        String str = "";
+        for(LocalDate date : subMap.keySet()){
             str += "\nBookings of " +  date + " : \n" ;
             if(bookingsMap.get(date).isEmpty())
                 str += " No bookings for this date\n";
             else
-                for(Booking booking : bookingsMap.get(date).values())
-                    str += booking.getDetails() .indent(-1)+ "\n";
+                str += getDetailsOfDate(date);
             str += "--------------------\n";
         }
         return str;
     }
 
-    public void printDetails () {
-        System.out.println(this.getDetails());
+    public String getDetailsFromDate (LocalDate startDate, int numberOfDays) {
+        LocalDate endDate = startDate.plusDays(numberOfDays);
+        return getDetailsBetweenTwoDates(startDate,endDate);
+    }
+
+    public String getDetailsOfAllDays () {
+        return getDetailsBetweenTwoDates(bookingsMap.firstKey(),bookingsMap.lastKey());
+    }
+
+    public void printDetailsOfDate (LocalDate date) {
+        System.out.println(getDetailsOfDate(date));
+    }
+
+    public void printDetailsBetweenTwoDates (LocalDate startDate, LocalDate endDate){
+        System.out.println(getDetailsBetweenTwoDates(startDate,endDate));
+    }
+
+    public void printDetailsFromDate (LocalDate startDate, int numberOfDays){
+        System.out.println(getDetailsFromDate(startDate,numberOfDays));
+    }
+
+    public void printDetailsOfAllDays ( ) {
+        System.out.println(getDetailsOfAllDays());
     }
 }

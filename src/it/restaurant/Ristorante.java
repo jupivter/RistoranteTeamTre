@@ -2,6 +2,7 @@
 package it.restaurant;
 
 import it.restaurant.prenotazione.Tavolo;
+import it.restaurant.utility.Comparators;
 
 
 import java.util.Comparator;
@@ -108,7 +109,7 @@ public class Ristorante {
     }
 
     private TreeSet<Tavolo> getFreeTablesFromFreeTables (Set<Tavolo>freeTables, int peopleNumber){
-        TreeSet<Tavolo> orderedTables = new TreeSet<>(Comparator.comparingInt(Tavolo::getNumeroPostiTavolo));
+        TreeSet<Tavolo> orderedTables = new TreeSet<>(Comparators.getCompareTablesBySeating());
         Set<Tavolo> targetTables = freeTables.stream().filter(tavolo -> tavolo.getNumeroPostiTavolo()>=peopleNumber).collect(Collectors.toSet());
         orderedTables.addAll(targetTables);
         return orderedTables;

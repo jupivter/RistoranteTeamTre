@@ -16,7 +16,8 @@ public class TestCalendar {
         StatusBookingEnum status = calendar.bookTable(createClientsList(4),getDateFromNow(5), LocalTime.of(12,00),45);
         System.out.println(status.getInfo());
         calendar.bookTable(createClientsList(4),getDateFromNow(5),LocalTime.of(12,05),55);
-        calendar.printDetails();
+        calendar.bookTable(createClientsList(5),getDateFromNow(5), LocalTime.of(12,00),70);
+        calendar.printDetailsOfAllDays();
 
     }
 
