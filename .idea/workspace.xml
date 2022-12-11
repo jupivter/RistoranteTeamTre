@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35c40b9-fcfd-4b4b-badf-7dd5e9f21347" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/StatusBookingEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/StatusInfoEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/TestCalendar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,11 +142,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java</url>
           <line>109</line>

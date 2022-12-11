@@ -15,7 +15,7 @@ import static java.util.Map.entry;
 
 public class CalendarBookings {
 
-    private TreeMap<LocalDate, TreeMap<LocalTime,Booking>> bookingsMap;
+    private TreeMap<LocalDate, TreeSet<Booking>> bookingsMap;
 
     private Ristorante restaurant;
 
@@ -53,7 +53,7 @@ public class CalendarBookings {
         for(int i=0; i<numberOfDays; i++) {
             LocalDate nextDay = startDate.plusDays(i);
             if(bookingsMap.keySet().contains(nextDay)) continue;
-            bookingsMap.put(nextDay,new TreeMap<>());
+            bookingsMap.put(nextDay,new TreeSet<>(Comparators.getCompareBookingsByDay()));
         }
     }
 
@@ -66,7 +66,7 @@ public class CalendarBookings {
     private StatusBookingEnum addBooking (List<Cliente> clientsList, LocalDate date, LocalTime time, long rangeTime, Tavolo table) {
         LocalDateTime dateTime = LocalDateTime.of(date,time);
         if(!checkDateInCalendar(date)) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusInfoEnum.DATE_OUT_OF_CALENDAR);
-        bookingsMap.get(date).put(time,new Booking(clientsList,dateTime,rangeTime,table));
+        bookingsMap.get(date).add(new Booking(clientsList,dateTime,rangeTime,table));
         return StatusBookingEnum.SUCCESS;
     }
 
@@ -94,14 +94,15 @@ public class CalendarBookings {
 
     private TreeSet<Booking> getBookingsOverlappingTime (LocalDate date, LocalTime time, long rangeTime){
         TreeSet <Booking> overlappingBookings = new TreeSet<>(Comparators.getCompareBookingsByDay());
-        TreeMap <LocalTime,Booking> dayBookingsMap = bookingsMap.get(date);
+        TreeSet <Booking> dayBookingsSet = bookingsMap.get(date);
+        TreeSet <LocalTime> dayBookingsTimesSet = new TreeSet<>(dayBookingsSet.stream().map(booking -> booking.getTime()).collect(Collectors.toSet()));
         long distanceTime = 0;
         LocalTime nextTime = time;
         while(distanceTime < rangeTime){
-            nextTime = dayBookingsMap.higherKey(nextTime);
+            nextTime = dayBookingsTimesSet.higher(nextTime);
             if(nextTime == null) break;
             distanceTime = Math.abs(ChronoUnit.MINUTES.between(time,nextTime));
-            if(distanceTime < rangeTime) overlappingBookings.add(dayBookingsMap.get(nextTime));
+            if(distanceTime < rangeTime) overlappingBookings.add(dayBookingsSet.get(nextTime));
         }
         LocalTime previusTime = time;
         while(previusTime!=null){
