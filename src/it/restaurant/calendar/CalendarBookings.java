@@ -104,7 +104,7 @@ public class CalendarBookings {
             }
             else
                 if(distanceTime < booking.getRangeTime()) overlappingBookings.add(booking);
-            }
+        }
         return overlappingBookings;
     }
 

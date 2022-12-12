@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
       <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPiattiEnum.java" afterDir="false" />
@@ -20,18 +19,6 @@
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Secondi.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/SecondiEnum.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" afterDir="false" />
-=======
-    <list default="true" id="a35c40b9-fcfd-4b4b-badf-7dd5e9f21347" name="Changes" comment="Modifiche varie Christian">
-      <change afterPath="$PROJECT_DIR$/src/it/tests/calendar/TestsCalendarBookigns.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/tests/restaurant/TestsRistorante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RistoranteTeamTre.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeamTre.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/TestCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/TestCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" afterDir="false" />
->>>>>>> feature/linkedList
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,29 +50,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-=======
-  <component name="PropertiesComponent">&quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/g92/OneDrive/Desktop/Develhope/TEAM_3_PROJECT/RistoranteTeamTre&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
-  }</component>
->>>>>>> feature/linkedList
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="it.restaurant.portate" />
-    </key>
-  </component>
-<<<<<<< HEAD
-  <component name="RunManager">
-=======
-  <component name="RunManager" selected="TestNG.TestsCalendarBookigns.testOverlappingBookingBefore">
->>>>>>> feature/linkedList
     <configuration default="true" type="JetRunConfigurationType">
       <module name="RistoranteGitProject" />
       <method v="2">
@@ -198,7 +162,6 @@
         <item itemvalue="TestNG.TestsCalendarBookigns.testActivateInterval" />
       </list>
     </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
