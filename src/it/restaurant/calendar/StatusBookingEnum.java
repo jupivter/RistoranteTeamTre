@@ -6,9 +6,12 @@ public enum StatusBookingEnum {
 
     private StatusBookingInfoEnum info;
 
+    private Booking succesfulBooking;
+
 
     private StatusBookingEnum () {
         this.info = StatusBookingInfoEnum.NO_INFO;
+        this.succesfulBooking = null;
     }
 
     public StatusBookingInfoEnum getInfo() {
@@ -24,7 +27,16 @@ public enum StatusBookingEnum {
         return this;
     }
 
+    public Booking getSuccesfulBooking() {
+        return succesfulBooking;
+    }
 
+    public void setSuccesfulBooking(Booking succesfulBooking) {
+        this.succesfulBooking = succesfulBooking;
+    }
 
-
+    public StatusBookingEnum setBookingAndGetStatus (Booking booking){
+        this.succesfulBooking = booking;
+        return this;
+    }
 }

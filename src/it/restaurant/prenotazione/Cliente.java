@@ -1,6 +1,15 @@
 package it.restaurant.prenotazione;
 
+import it.restaurant.calendar.Booking;
+import it.restaurant.calendar.CalendarBookings;
+import it.restaurant.calendar.StatusBookingEnum;
 import it.restaurant.portate.CategoriesEnum;
+import it.restaurant.utility.Comparators;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
+import java.util.TreeSet;
 
 /**
  * Creazione classe Cliente
@@ -16,6 +25,7 @@ public class Cliente {
 
     private CategoriesEnum menuTypesEnum;
 
+    private TreeSet<Booking> myBookingsSet;
 
     /**
      * Inserito metodo costruttore Parametrizzato con :
@@ -27,6 +37,7 @@ public class Cliente {
         this.nome = nome;
         this.cognome = cognome;
         this.numeroDiCellulare = numeroDiCellulare;
+        this.myBookingsSet = new TreeSet<>(Comparators.getCompareBookingsByDay());
     }
 
 
@@ -72,13 +83,16 @@ public class Cliente {
     //TODO dobbiamo memorizzare da qualche parte le prenotazione
 
     private String prenotazione;
-    /*public void prenota(Cliente cliente, Tavolo tavolo) {
-        if(tavolo.isFree() == true) {
-            System.out.println("Il " + cliente.datiCliente() + "\n" + "ha prenotato il " + tavolo.infoTavolo());
-        }else {
-            System.out.println("Il tavolo è già prenotato.\nScegli un'altro tavolo");
+    public StatusBookingEnum bookTable (CalendarBookings calendar, List<Cliente> clientsList, LocalDate date, LocalTime time, long rangeTime) {
+        StatusBookingEnum statusBooking =  calendar.bookTable(clientsList,date,time,rangeTime);
+        if(statusBooking == StatusBookingEnum.SUCCESS){
+            myBookingsSet.add(statusBooking.getSuccesfulBooking());
         }
-    }*/
+        else{
+            // get info e agire di conseguenza
+        }
+        return statusBooking;
+    }
 
     /**
      * Inserito metodo prenota che permetterà alla classe Cliente di richiamare la classe Portata e tutte le sotto classi

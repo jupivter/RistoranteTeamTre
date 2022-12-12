@@ -64,8 +64,9 @@ public class CalendarBookings {
     private StatusBookingEnum addBooking (List<Cliente> clientsList, LocalDate date, LocalTime time, long rangeTime, Tavolo table) {
         LocalDateTime dateTime = LocalDateTime.of(date,time);
         if(!checkDateInCalendar(date)) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusBookingInfoEnum.DATE_OUT_OF_CALENDAR);
-        bookingsMap.get(date).add(new Booking(clientsList,dateTime,rangeTime,table));
-        return StatusBookingEnum.SUCCESS;
+        Booking newBooking = new Booking(clientsList,dateTime,rangeTime,table);
+        bookingsMap.get(date).add(newBooking);
+        return StatusBookingEnum.SUCCESS.setBookingAndGetStatus(newBooking);
     }
 
 
