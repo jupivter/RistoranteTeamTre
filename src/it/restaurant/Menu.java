@@ -1,6 +1,8 @@
 package it.restaurant;
 
+import it.restaurant.portate.Bevanda;
 import it.restaurant.portate.CategoriesEnum;
+import it.restaurant.portate.Piatto;
 import it.restaurant.portate.Portata;
 
 import java.util.ArrayList;
@@ -9,17 +11,18 @@ import java.util.List;
 public class Menu {
 
     private CategoriesEnum menuTypesEnum;
-    private List<Portata> portateList;
+    private List<Piatto> listaPiatti;
+    private List<Bevanda> listaBevande;
 
 
     public Menu(CategoriesEnum menuTypesEnum){
         this.menuTypesEnum = menuTypesEnum;
-        portateList = new ArrayList<>();
+        listaPiatti = new ArrayList<>();
     }
 
-    public Menu(CategoriesEnum menuTypesEnum, List <Portata> portate){
+    public Menu(CategoriesEnum menuTypesEnum, List<Piatto> listaPiatti){
         this.menuTypesEnum = menuTypesEnum;
-        this.portateList = portate;
+        this.listaPiatti = listaPiatti;
     }
 
     public CategoriesEnum getMenuTypesEnum() {
@@ -30,15 +33,36 @@ public class Menu {
         this.menuTypesEnum = menuTypesEnum;
     }
 
-    public List<Portata> getPortateList() {
-        return portateList;
+    public List<Piatto> getListaPiatti() {
+        return listaPiatti;
     }
 
-    public void setPortateList(List<Portata> portateList) {
-        this.portateList = portateList;
+    public void setListaPiatti(List<Piatto> listaPiatti) {
+        this.listaPiatti = listaPiatti;
     }
 
-    public void addPortata(Portata portata){
-        portateList.add(portata);
+    public void addPortata(Piatto piatto){
+        listaPiatti.add(piatto);
+    }
+
+    public List<Bevanda> getListaBevande() {
+        return listaBevande;
+    }
+
+    public void setListaBevande(List<Bevanda> listaBevande) {
+        this.listaBevande = listaBevande;
+    }
+
+    public static List<Piatto> dishFilter(List<Piatto> listaPiatti, CategoriesEnum categoriesEnum){
+        List<Piatto> listaFiltrata = new ArrayList<>();
+        for (Piatto piatto : listaPiatti
+        ) {
+            if (piatto.getCategories().equals(categoriesEnum)){
+                listaFiltrata.add(piatto);
+            }
+        }
+        System.out.println("\n------------LISTA FILTRATA------------\n");
+        listaFiltrata.forEach(piatto -> piatto.stampaDettagli());
+        return listaFiltrata;
     }
 }
