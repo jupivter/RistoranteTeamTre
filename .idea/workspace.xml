@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPiattiEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/TypesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/CategoriesEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Dessert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Primi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/PrimiEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Secondi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/SecondiEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,122 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="RistoranteGitProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="RistoranteGitProject" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsCalendarBookigns.testActivateInterval" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RistoranteTeamTre" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.tests.calendar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.tests.calendar" />
-      <option name="MAIN_CLASS_NAME" value="it.tests.calendar.TestsCalendarBookigns" />
-      <option name="METHOD_NAME" value="testActivateInterval" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsCalendarBookigns.testBookTable" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RistoranteTeamTre" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.tests.calendar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.tests.calendar" />
-      <option name="MAIN_CLASS_NAME" value="it.tests.calendar.TestsCalendarBookigns" />
-      <option name="METHOD_NAME" value="testBookTable" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsCalendarBookigns.testBookTable_01" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RistoranteTeamTre" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.tests.calendar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.tests.calendar" />
-      <option name="MAIN_CLASS_NAME" value="it.tests.calendar.TestsCalendarBookigns" />
-      <option name="METHOD_NAME" value="testBookTable_01" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsCalendarBookigns.testOverlappingBookingAfter" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RistoranteTeamTre" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.tests.calendar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.tests.calendar" />
-      <option name="MAIN_CLASS_NAME" value="it.tests.calendar.TestsCalendarBookigns" />
-      <option name="METHOD_NAME" value="testOverlappingBookingAfter" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestsCalendarBookigns.testOverlappingBookingBefore" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RistoranteTeamTre" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.tests.calendar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.tests.calendar" />
-      <option name="MAIN_CLASS_NAME" value="it.tests.calendar.TestsCalendarBookigns" />
-      <option name="METHOD_NAME" value="testOverlappingBookingBefore" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="TestNG.TestsCalendarBookigns.testOverlappingBookingBefore" />
-        <item itemvalue="TestNG.TestsCalendarBookigns.testOverlappingBookingAfter" />
-        <item itemvalue="TestNG.TestsCalendarBookigns.testBookTable_01" />
-        <item itemvalue="TestNG.TestsCalendarBookigns.testBookTable" />
-        <item itemvalue="TestNG.TestsCalendarBookigns.testActivateInterval" />
-      </list>
-    </recent_temporary>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a35c40b9-fcfd-4b4b-badf-7dd5e9f21347" name="Changes" comment="" />
+      <changelist id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian" />
       <created>1667469131977</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -213,7 +98,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Peppe" />
+                        <option value="feature/linkedList" />
                       </list>
                     </value>
                   </entry>

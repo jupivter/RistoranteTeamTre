@@ -101,20 +101,20 @@ public class Ristorante {
         return tavoli.get(numero);
     }
 
-    private Set<Tavolo> getFreeTables (Set<Tavolo> takenTables) {
-        return tavoli.values().stream().filter(tavolo -> !takenTables.contains(tavolo)).collect(Collectors.toSet());
-    }
-
-    private TreeSet<Tavolo> getFreeTablesFromFreeTables (Set<Tavolo>freeTables, int peopleNumber){
-        TreeSet<Tavolo> orderedTables = new TreeSet<>(Comparators.getCompareTablesBySeating());
-        Set<Tavolo> targetTables = freeTables.stream().filter(tavolo -> tavolo.getNumeroPostiTavolo()>=peopleNumber).collect(Collectors.toSet());
-        orderedTables.addAll(targetTables);
-        return orderedTables;
-    }
-
     public TreeSet<Tavolo> getFreeTableFromTakenTables (Set<Tavolo>takenTables, int peopleNumber){
-        return getFreeTablesFromFreeTables(getFreeTables(takenTables),peopleNumber);
+        Set<Tavolo> freeTables = tavoli.values().stream()
+                .filter(tavolo -> !takenTables.contains(tavolo)).collect(Collectors.toSet());
+        return getPossibleTablesFromFreeTables(freeTables,peopleNumber);
     }
+
+    private TreeSet<Tavolo> getPossibleTablesFromFreeTables (Set<Tavolo>freeTables, int peopleNumber){
+        TreeSet<Tavolo> possibleTables = new TreeSet<>(Comparators.getCompareTablesBySeating());
+        Set<Tavolo> targetTables = freeTables.stream().filter(tavolo -> tavolo.getNumeroPostiTavolo()>=peopleNumber).collect(Collectors.toSet());
+        possibleTables.addAll(targetTables);
+        return possibleTables;
+    }
+
+
 
 }
 
