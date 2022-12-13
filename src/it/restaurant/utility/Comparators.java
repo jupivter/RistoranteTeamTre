@@ -9,15 +9,15 @@ public class Comparators  {
 
     private Comparators() {}
 
-    private static Comparator<Booking> compareBookingsByDay =  (b1, b2) -> {
+    private static Comparator<Booking> compareBookingsByDateTime =  (b1, b2) -> {
         if(b1 == b2) return 0;
-        if(b1.getTime().isBefore(b2.getTime())) return -1;
+        if(b1.getDateTime().isBefore(b2.getDateTime())) return -1;
         else return 1;
     };;
 
 
-    public static Comparator<Booking> getCompareBookingsByDay () {
-        return compareBookingsByDay;
+    public static Comparator<Booking> getCompareBookingsByDateTime() {
+        return compareBookingsByDateTime;
     }
 
 

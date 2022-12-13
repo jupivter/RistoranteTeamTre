@@ -52,7 +52,7 @@ public class CalendarBookings {
         for(int i=0; i<numberOfDays; i++) {
             LocalDate nextDay = startDate.plusDays(i);
             if(bookingsMap.containsKey(nextDay)) continue;
-            bookingsMap.put(nextDay, new TreeSet<>(Comparators.getCompareBookingsByDay()));
+            bookingsMap.put(nextDay, new TreeSet<>(Comparators.getCompareBookingsByDateTime()));
         }
     }
 
@@ -91,7 +91,7 @@ public class CalendarBookings {
 
 
     private TreeSet<Booking> getBookingsOverlappingTime (LocalDate date, LocalTime time, long rangeTime){
-        TreeSet <Booking> overlappingBookings = new TreeSet<>(Comparators.getCompareBookingsByDay());
+        TreeSet <Booking> overlappingBookings = new TreeSet<>(Comparators.getCompareBookingsByDateTime());
         TreeSet <Booking> dayBookingsSet = bookingsMap.get(date);
         long distanceTime = 0;
         for(Booking booking : dayBookingsSet){

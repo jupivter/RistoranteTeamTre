@@ -37,7 +37,7 @@ public class Cliente {
         this.nome = nome;
         this.cognome = cognome;
         this.numeroDiCellulare = numeroDiCellulare;
-        this.myBookingsSet = new TreeSet<>(Comparators.getCompareBookingsByDay());
+        this.myBookingsSet = new TreeSet<>(Comparators.getCompareBookingsByDateTime());
     }
 
 
