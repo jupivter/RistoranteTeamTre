@@ -6,22 +6,15 @@ package it.restaurant.portate;
 
 public class Piatto extends Portata {
 
-   private TypesPiattiEnum types;
+
    private CategoriesEnum categories;
 
-    public Piatto(String name, double price, TypesPiattiEnum types, CategoriesEnum categories) {
-        super(name, price);
-        this.types =types;
+    public Piatto(String name, double price, TypesPortataEnum types, CategoriesEnum categories) {
+        super(name, price,types);
         this.categories = categories;
     }
 
-    public TypesPiattiEnum getTypes() {
-        return types;
-    }
 
-    public void setTypes(TypesPiattiEnum types) {
-        this.types = types;
-    }
 
     public CategoriesEnum getCategories() {
         return categories;
@@ -32,6 +25,6 @@ public class Piatto extends Portata {
     }
 
     public void stampaDettagli() {
-        System.out.println("Nome del piatto : " + getName() + " - Prezzo : " + getPrice()+ " - Tipologia di Piatto : " + types +"-  Categoria di riferimento : "+ categories);
+        System.out.println("Nome del piatto : " + getName() + " - Prezzo : " + getPrice()+ " - Tipologia di Piatto : " + getTypes() +"-  Categoria di riferimento : "+ categories);
     }
 }

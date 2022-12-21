@@ -22,14 +22,14 @@ public class Main {
         ristorante.aggiungiTavolo(1, tavolo1);
         tavolo1.infoTavolo();
 
-        Piatto formaggi= new Piatto("Tagliere di formaggi",17.50,TypesPiattiEnum.PRIMI,CategoriesEnum.VEGETARIANO);
+        Piatto formaggi= new Piatto("Tagliere di formaggi",17.50, TypesPortataEnum.PRIMI,CategoriesEnum.VEGETARIANO);
         Bevanda cosmopolitan = new Bevanda("Cosmopolitan", 8.50,true,false);
         cosmopolitan.stampaDettagli();
         formaggi.stampaDettagli();
 
-        Piatto tagliereSalumi= new Piatto("Tagliere di salumi",17.50,TypesPiattiEnum.ANTIPASTI,CategoriesEnum.BASECARNE);
-        Piatto carbonara= new Piatto("Carbonara",17.50,TypesPiattiEnum.PRIMI,CategoriesEnum.BASECARNE);
-        Piatto amatriciana= new Piatto("Amatriciana",17.50,TypesPiattiEnum.PRIMI,CategoriesEnum.BASECARNE);
+        Piatto tagliereSalumi= new Piatto("Tagliere di salumi",17.50, TypesPortataEnum.ANTIPASTI,CategoriesEnum.BASECARNE);
+        Piatto carbonara= new Piatto("Carbonara",17.50, TypesPortataEnum.PRIMI,CategoriesEnum.BASECARNE);
+        Piatto amatriciana= new Piatto("Amatriciana",17.50, TypesPortataEnum.PRIMI,CategoriesEnum.BASECARNE);
 
 
         List<Piatto> listaPiatti = new ArrayList<>(Arrays.asList(tagliereSalumi, carbonara, amatriciana));

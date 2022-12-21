@@ -8,11 +8,14 @@ public class Portata {
      */
     private String name;
     private double price;
+    private TypesPortataEnum types;
 
-    public Portata(String name, double price) {
+    public Portata(String name, double price, TypesPortataEnum types) {
         this.name = name;
         this.price = price;
+        this.types =types;
     }
+
 
     /**
      * Get & Set delle variabili
@@ -31,6 +34,15 @@ public class Portata {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+
+    public TypesPortataEnum getTypes() {
+        return types;
+    }
+
+    public void setTypes(TypesPortataEnum types) {
+        this.types = types;
     }
 
     /**
