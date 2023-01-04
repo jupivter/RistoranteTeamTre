@@ -1,11 +1,11 @@
 
 package it.restaurant;
 
+import it.restaurant.portate.CategoriesEnum;
 import it.restaurant.prenotazione.Tavolo;
 import it.restaurant.utility.Comparators;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.TreeSet;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -24,6 +24,8 @@ public class Ristorante {
     //al posto di integer potremmo mettere una lista di clienti, con tavolo per chiave ("questo tavolo è occupato da questo gruppo di clienti")
     private HashMap<Integer, Tavolo> tavoli = new HashMap<>();
 
+    private Map<CategoriesEnum, Menu> menusMap;
+
     /**
      * Inserito metodo costruttore Parametrizzato con :
      * @param name
@@ -36,6 +38,7 @@ public class Ristorante {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.menusMap = new HashMap<>();
     }
 
     /**
@@ -80,6 +83,14 @@ public class Ristorante {
 
     public void setTavoli(HashMap<Integer, Tavolo> tavoli) {
         this.tavoli = tavoli;
+    }
+
+    public void setMenuByCategory (CategoriesEnum category, Menu menu){
+        this.menusMap.put(category,menu);
+    }
+
+    public Menu getMenuByCategory (CategoriesEnum categoryEnum) {
+        return this.menusMap.get(categoryEnum);
     }
 
     /**

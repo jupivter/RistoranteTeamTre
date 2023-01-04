@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static it.restaurant.Menu.dishFilter;
+import static it.restaurant.Menu.filterPiatti;
 
 public class Main {
 
@@ -32,11 +32,13 @@ public class Main {
         Piatto amatriciana= new Piatto("Amatriciana",17.50, TypesPortataEnum.PRIMI,CategoriesEnum.BASECARNE);
 
 
-        List<Piatto> listaPiatti = new ArrayList<>(Arrays.asList(tagliereSalumi, carbonara, amatriciana));
+        List<Piatto> listaPiatti = new ArrayList<>();
+        listaPiatti.add(tagliereSalumi);
+        listaPiatti.add(carbonara);
+        listaPiatti.add(amatriciana);
 
-        List<Piatto> listaFiltrata = new ArrayList<>();
-        listaFiltrata = dishFilter(listaPiatti, CategoriesEnum.BASECARNE);
 
+        List<Piatto> listaFiltrata  = filterPiatti(listaPiatti, CategoriesEnum.BASECARNE);
 
     }
 }

@@ -7,10 +7,10 @@
     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPiattiEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPortataEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

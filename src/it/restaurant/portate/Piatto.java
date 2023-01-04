@@ -25,6 +25,6 @@ public class Piatto extends Portata {
     }
 
     public void stampaDettagli() {
-        System.out.println("Nome del piatto : " + getName() + " - Prezzo : " + getPrice()+ " - Tipologia di Piatto : " + getTypes() +"-  Categoria di riferimento : "+ categories);
+        System.out.println("Nome del piatto : " + getName() + " - Prezzo : " + getPrice()+ " - Tipologia di Piatto : " + getType() +"-  Categoria di riferimento : "+ categories);
     }
 }
