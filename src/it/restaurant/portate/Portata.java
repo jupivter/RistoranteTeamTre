@@ -1,4 +1,9 @@
 package it.restaurant.portate;
+
+import it.database.Create;
+
+import java.sql.SQLException;
+
 /**
  * Creazione classe padre Portata
  */
@@ -50,6 +55,12 @@ public class Portata {
      */
     public void stampaDettagli() {
         System.out.println("Nome : " + name + " - " + price);
+    }
+
+    public static void createTable() throws SQLException {
+        Create.createTable("Portata","ID");
+        Create.addColTable("Portata","Name","varchar(30)");
+        Create.addColTable("Portata","Price","double");
     }
 
 
