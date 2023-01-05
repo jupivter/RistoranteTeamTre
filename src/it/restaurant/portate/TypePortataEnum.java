@@ -1,6 +1,6 @@
 package it.restaurant.portate;
 
-public enum TypesPortataEnum {
+public enum TypePortataEnum {
 
     ANTIPASTI,
     PRIMI,

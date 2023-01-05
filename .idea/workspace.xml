@@ -8,9 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPortataEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/TypePortataEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Peppe21" />
+                        <option value="Peppe" />
                       </list>
                     </value>
                   </entry>
