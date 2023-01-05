@@ -58,5 +58,14 @@
         <jarDirectory url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mysql-connector-j-8.0.31.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -1,0 +1,21 @@
+
+7
+java:S1643|"Use a StringBuilder instead.(Çå¨²şÿÿÿÿ
+8
+java:S1643„"Use a StringBuilder instead.(ºÁ€®ûÿÿÿÿ
+3
+java:S1643†"Use a StringBuilder instead.(‹ïí
+8
+java:S1643ˆ"Use a StringBuilder instead.(¹÷ Ñùÿÿÿÿ
+8
+java:S1643‰"Use a StringBuilder instead.(Ç¾¯Úıÿÿÿÿ
+B
+java:S3599",Use another way to initialize this instance.(âÌÑ¸
+o
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(âÌÑ¸
+C
+java:S1125<"(Remove the unnecessary boolean literals.(…Ÿ¦÷üÿÿÿÿ
+O	java:S106˜"9Replace this use of System.out or System.err by a logger.(ïŒ½î
+T	java:S106œ"9Replace this use of System.out or System.err by a logger.(Ğ“µ˜ùÿÿÿÿ
+O	java:S106 "9Replace this use of System.out or System.err by a logger.(€Õ
+T	java:S106¤"9Replace this use of System.out or System.err by a logger.(í•Æ—úÿÿÿÿ

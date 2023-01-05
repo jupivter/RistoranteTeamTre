@@ -7,7 +7,8 @@ import java.sql.SQLException;
 public class TestCreate {
     public static void main(String[] args) throws SQLException {
 
-        Portata.createTable();
+        //Portata.createTable();
+        View.getTable("portata");
 
 
     }

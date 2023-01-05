@@ -1,0 +1,100 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,10 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
++    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="aggiunto DishFilter">
++      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -39,16 +38,17 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "last_opened_file_path": "C:/Users/franc/Documents/DEVELHOPE/JAVA/Progetto Menù/Team1_RestaurantMenu",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.0"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/Documents/DEVELHOPE/JAVA/Progetto Menù/Team1_RestaurantMenu&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -86,7 +86,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669047008707</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="aggiunto DishFilter">
++      <created>1670858292492</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1670858292492</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -117,6 +124,7 @@
+     <MESSAGE value="correzione progetto" />
+     <MESSAGE value="add Primi" />
+     <MESSAGE value="Modifiche varie Christian" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie Christian" />
++    <MESSAGE value="aggiunto DishFilter" />
++    <option name="LAST_COMMIT_MESSAGE" value="aggiunto DishFilter" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/sonarlint/issuestore/index.pb
+===================================================================
+diff --git a/.idea/sonarlint/issuestore/index.pb b/.idea/sonarlint/issuestore/index.pb
+--- a/.idea/sonarlint/issuestore/index.pb	
++++ b/.idea/sonarlint/issuestore/index.pb	
+@@ -1,0 +1,19 @@
++
++\
++,src/it/tests/restaurant/TestsRistorante.java,5\b\5be7baebeca2a7be7822c002f79b66665b761ec2
++`
++0src/it/tests/calendar/TestsCalendarBookigns.java,7\f\7f8cc7502eaaf65ef10b48a2c06e8568e4904b17
++V
++&src/it/restaurant/portate/Bevanda.java,e\e\ee38c84ecdc86222ea2c9bd5fcef57fd4bb35a25
++K
++src/it/restaurant/Main.java,f\2\f29805ac8fc52fb80bafc3c8525dc16c3bebe839
++W
++'src/it/restaurant/calendar/Booking.java,4\d\4d3a3176ecf9a9dbec962a9c6ea4a69810d6d2da
++`
++0src/it/restaurant/calendar/CalendarBookings.java,0\7\07b5774e735d4ad20d32155ff8a84577188a19d5
++U
++%src/it/restaurant/portate/Piatto.java,e\5\e5e46c7e1a5bad72189747b6d251983521ea9553
++^
++.src/it/restaurant/portate/TypesPiattiEnum.java,6\5\6539ba899f41a5a25618ed0fbb06fa48e695a8aa
++]
++-src/it/restaurant/portate/CategoriesEnum.java,8\0\802373ef1faebe167908dd9c2cd32a31a5a2999e
+\ No newline at end of file

@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class Create {
 
     private static final String url = "jdbc:mysql://localhost:3306/newdb";
-    private static final String user = "developer";
-    private static final  String password = "passwordhere";
+    private static final String user = "----------";
+    private static final  String password = "----------";
 
     public static void createTable(String tableName, String idName) throws SQLException {
         Connection conn = DriverManager.getConnection(url,user,password);
