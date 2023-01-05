@@ -9,7 +9,7 @@ public class Piatto extends Portata {
 
    private CategoriesEnum categories;
 
-    public Piatto(String name, double price, TypesPortataEnum types, CategoriesEnum categories) {
+    public Piatto(String name, double price, TypePortataEnum types, CategoriesEnum categories) {
         super(name, price,types);
         this.categories = categories;
     }

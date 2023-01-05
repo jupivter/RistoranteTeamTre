@@ -11,7 +11,7 @@ public class Bevanda extends Portata {
 
 
     public Bevanda(String name, double price, boolean alcoholic, boolean ice) {
-        super(name, price, TypesPortataEnum.BEVANDA);
+        super(name, price, TypePortataEnum.BEVANDA);
         this.alcoholic = alcoholic;
         this.ice = ice;
     }

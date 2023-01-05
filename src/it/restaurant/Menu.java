@@ -29,11 +29,11 @@ public class Menu {
 
     public List<Bevanda> getListaBevande() {
         return (List<Bevanda>) listaPortate.stream()
-                                .filter(portata -> portata.getType()== TypesPortataEnum.BEVANDA)
+                                .filter(portata -> portata.getType()== TypePortataEnum.BEVANDA)
                                 .collect(Collectors.toList());
     }
 
-    public List<Piatto> getListPiattiByTypePortata (TypesPortataEnum type) {
+    public List<Piatto> getListPiattiByTypePortata (TypePortataEnum type) {
         return (List<Piatto>) listaPortate.stream()
                                 .filter(portata -> portata.getType() == type)
                                 .collect(Collectors.toList());

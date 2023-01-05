@@ -8,9 +8,9 @@ public class Portata {
      */
     private String name;
     private double price;
-    private TypesPortataEnum type;
+    private TypePortataEnum type;
 
-    public Portata(String name, double price, TypesPortataEnum type) {
+    public Portata(String name, double price, TypePortataEnum type) {
         this.name = name;
         this.price = price;
         this.type = type;
@@ -37,11 +37,11 @@ public class Portata {
     }
 
 
-    public TypesPortataEnum getType() {
+    public TypePortataEnum getType() {
         return type;
     }
 
-    public void setType(TypesPortataEnum type) {
+    public void setType(TypePortataEnum type) {
         this.type = type;
     }
 
