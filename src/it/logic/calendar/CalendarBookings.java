@@ -1,10 +1,14 @@
 package it.logic.calendar;
 
+import it.database.Alter;
+import it.database.Create;
+import it.database.Insert;
 import it.logic.restaurant.Restaurant;
 import it.logic.restaurant.Table;
 import it.logic.utility.Comparators;
 import it.logic.prenotazione.Client;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -13,6 +17,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class CalendarBookings {
+
+    private String tableName = "CalendarBookings";
 
     private TreeMap<LocalDate, TreeSet<Booking>> bookingsMap;
 
@@ -181,5 +187,17 @@ public class CalendarBookings {
 
     public void printDetailsOfAllDays ( ) {
         System.out.println(getDetailsOfAllDays());
+    }
+
+
+    public void createTable ( ) throws SQLException {
+        Create.createTable(this.tableName, CalBookTableColsEnum.BOOKING_ID.getColName());
+        Alter.addNewColumn(this.tableName, CalBookTableColsEnum.TABLE_ID.getColName(), CalBookTableColsEnum.TABLE_ID.getType());
+        Alter.addNewColumn(this.tableName, CalBookTableColsEnum.DATE_TIME.getColName(),  CalBookTableColsEnum.DATE_TIME.getType());
+        Alter.addNewColumn(this.tableName, CalBookTableColsEnum.RANGE_TIME.getColName(), CalBookTableColsEnum.RANGE_TIME.getType());
+    }
+
+    public void insertBookingIntoTable (Booking booking) throws SQLException {
+        Insert.insertValuesIntoTable(this.tableName, booking.createMapColumnValue());
     }
 }

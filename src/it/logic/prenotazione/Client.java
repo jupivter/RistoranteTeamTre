@@ -64,7 +64,7 @@ public class Client {
 
     public StatusBooking bookTable(CalendarBookings calendar, List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime) {
         StatusBooking statusBooking =  calendar.bookTable(clientsList,date,time,rangeTime);
-        if(statusBooking == StatusBooking.SUCCESS){
+        if(statusBooking.isSuccess()){
             myBookingsSet.add(statusBooking.getSuccessfulBooking());
         }
         else{

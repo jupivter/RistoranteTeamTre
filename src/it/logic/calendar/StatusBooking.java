@@ -31,7 +31,7 @@ public class StatusBooking {
         return success;
     }
 
-    public Booking getSuccesfulBooking() {
+    public Booking getSuccessfulBooking() {
         return succesfulBooking.get();
     }
 

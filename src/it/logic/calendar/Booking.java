@@ -6,7 +6,9 @@ import it.logic.restaurant.Table;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Booking {
 
@@ -72,11 +74,13 @@ public class Booking {
                 "\n People number: " + clientsList.size() +
                 "\n Table: " + table.getTableNumber() ;
     }
-    /*
-    @Override
-    public int compareTo(Booking booking) {
-        if(this == booking) return 0;
-        if(this.getTime().isBefore(booking.getTime())) return -1;
-        else  return 1;
-    }*/
+
+    public Map<String,String> createMapColumnValue ( ) {
+        Map<String,String> col_val = new HashMap<>();
+        col_val.put(CalBookTableColsEnum.DATE_TIME.getColName(), this.dateTime.toString());
+        col_val.put(CalBookTableColsEnum.TABLE_ID.getColName(), Integer.toString(this.table.getTableNumber()));
+        col_val.put(CalBookTableColsEnum.RANGE_TIME.getColName(), Long.toString(this.rangeTime));
+        return col_val;
+    }
+
 }

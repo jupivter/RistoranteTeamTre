@@ -109,10 +109,10 @@ public class Menu {
      */
     public void createMenuTable() throws SQLException {
         Create.createTable("Menu "+this.categoryMenu.name()+"", "idPortata");
-        Alter.AddNewColumn("Menu "+this.categoryMenu.name()+"", "nome", "VARCHAR(45)");
-        Alter.AddNewColumn("Menu "+this.categoryMenu.name()+"", "prezzo", "DOUBLE" );
-        Alter.AddNewColumn("Menu "+this.categoryMenu.name()+"", "tipoPortata", "VARCHAR(45)" );
-        Alter.AddNewColumn("Menu "+this.categoryMenu.name()+"", "categoriaPortata", "VARCHAR(45)");
+        Alter.addNewColumn("Menu "+this.categoryMenu.name()+"", "nome", "VARCHAR(45)");
+        Alter.addNewColumn("Menu "+this.categoryMenu.name()+"", "prezzo", "DOUBLE" );
+        Alter.addNewColumn("Menu "+this.categoryMenu.name()+"", "tipoPortata", "VARCHAR(45)" );
+        Alter.addNewColumn("Menu "+this.categoryMenu.name()+"", "categoriaPortata", "VARCHAR(45)");
     }
 
     public void addCourseToMenuTable(){

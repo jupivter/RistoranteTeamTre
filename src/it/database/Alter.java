@@ -13,7 +13,7 @@ public class Alter {
      * @param columnType tipo della colonna.
      * @throws SQLException
      */
-    public static void AddNewColumn(String tableName, String columnName, String columnType) throws SQLException {
+    public static void addNewColumn(String tableName, String columnName, String columnType) throws SQLException {
         Connection conn = DriverManager.getConnection(url,user,password);
         Statement statement= conn.createStatement();
 

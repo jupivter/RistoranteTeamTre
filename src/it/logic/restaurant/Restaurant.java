@@ -23,6 +23,7 @@ public class Restaurant {
         this.setPhoneNumber(phoneNumber);
         this.setEmail(email);
         this.setMappaMenu(new EnumMap<>(CategoryEnum.class));
+        this.setTablesMap(new HashMap<>());
         this.setListaPortate(new ArrayList<>());
     }
 
