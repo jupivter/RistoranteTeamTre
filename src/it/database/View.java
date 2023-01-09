@@ -2,11 +2,9 @@ package it.database;
 
 import java.sql.*;
 
-public class View {
+import static it.database.DatabaseCredentials.*;
 
-    private static final String url = "jdbc:mysql://localhost:3306/newdb";
-    private static final String user = "----------";
-    private static final  String password = "----------";
+public class View {
 
     public static void getTable(String tableName) throws SQLException {
         Connection conn = DriverManager.getConnection(url, user, password);

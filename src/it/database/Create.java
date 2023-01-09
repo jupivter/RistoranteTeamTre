@@ -5,35 +5,26 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static it.database.DatabaseCredentials.*;
+
 public class Create {
 
-    private static final String url = "jdbc:mysql://localhost:3306/newdb";
-    private static final String user = "----------";
-    private static final  String password = "----------";
-
+    /**
+     * Questo metodo crea una tabella a partire dai parametri inseriti.
+     * @param tableName nome della tabella.
+     * @param idName nome del'id (chiave primaria).
+     * @throws SQLException
+     */
     public static void createTable(String tableName, String idName) throws SQLException {
         Connection conn = DriverManager.getConnection(url,user,password);
-
-        Statement statement= conn.createStatement();
-        String varname1 =  ""
-                + "CREATE TABLE `"+tableName+"` ( "
-                + "  `"+idName+"` int NOT NULL AUTO_INCREMENT, "
-                + "  PRIMARY KEY (`"+idName+"`) "
-                + ")";
-        statement.executeUpdate(varname1);
-        statement.close();
-
-    }
-    public static void addColTable(String tableName, String colName,String type) throws SQLException {
-        Connection conn =DriverManager.getConnection(url,user,password);
-
         Statement statement= conn.createStatement();
 
-        String varname1 = ""
-                + "ALTER TABLE newdb."+tableName+" ADD "+colName+" "+type+" NULL;";
+        String createTableQuery = ""
+                + "CREATE TABLE `ristorante`.`"+tableName+"` ( "
+                + "  `"+idName+"` INT NOT NULL AUTO_INCREMENT, "
+                + "  PRIMARY KEY (`"+idName+"`));";
 
-
-        statement.executeUpdate(varname1);
-        statement.close();
+        statement.executeUpdate(createTableQuery);
+        conn.close();
     }
 }
