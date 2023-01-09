@@ -26,7 +26,7 @@ public class TestCalendar {
         CalendarBookings calendar = new CalendarBookings(restaurant);
         calendar.activateIntervalFromDate(LocalDate.now(),30);
         //calendar.printDetails();
-        StatusBookingEnum status = calendar.bookTable(createClientsList(4),getDateFromNow(5), LocalTime.of(12,00),45);
+        StatusBooking status = calendar.bookTable(createClientsList(4),getDateFromNow(5), LocalTime.of(12,00),45);
         System.out.println(status.getInfo());
         calendar.bookTable(createClientsList(4),getDateFromNow(5),LocalTime.of(12,05),55);
         calendar.bookTable(createClientsList(5),getDateFromNow(5), LocalTime.of(12,00),70);

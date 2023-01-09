@@ -2,7 +2,7 @@ package it.logic.prenotazione;
 
 import it.logic.calendar.Booking;
 import it.logic.calendar.CalendarBookings;
-import it.logic.calendar.StatusBookingEnum;
+import it.logic.calendar.StatusBooking;
 import it.logic.portate.CategoryEnum;
 import it.logic.utility.Comparators;
 
@@ -62,9 +62,9 @@ public class Client {
         return "Cliente: " + this.name + " - " + this.surname;
     }
 
-    public StatusBookingEnum bookTable(CalendarBookings calendar, List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime) {
-        StatusBookingEnum statusBooking =  calendar.bookTable(clientsList,date,time,rangeTime);
-        if(statusBooking == StatusBookingEnum.SUCCESS){
+    public StatusBooking bookTable(CalendarBookings calendar, List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime) {
+        StatusBooking statusBooking =  calendar.bookTable(clientsList,date,time,rangeTime);
+        if(statusBooking == StatusBooking.SUCCESS){
             myBookingsSet.add(statusBooking.getSuccessfulBooking());
         }
         else{

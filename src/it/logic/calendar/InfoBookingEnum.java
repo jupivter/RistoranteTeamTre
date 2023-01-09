@@ -1,6 +1,6 @@
 package it.logic.calendar;
 
-public enum StatusBookingInfoEnum {
+public enum InfoBookingEnum {
         NO_INFO,
         NO_FREE_TABLES,
         DATE_OUT_OF_CALENDAR;

@@ -56,22 +56,6 @@ public class CalendarBookings {
         return date.isBefore(bookingsMap.firstKey()) || date.isAfter(bookingsMap.lastKey()) ?  false : true;
     }
 
-    /**
-     * Questo metodo aggiunge una prenotazione alla mappa delle prenotazioni.
-     * @param clientsList lista di persone legate alla singola prenotazione.
-     * @param date data in cui si vuole prenotare.
-     * @param time orario in cui si vuole prenotare.
-     * @param rangeTime durata della permanenza al tavolo.
-     * @param table tavolo selezionato.
-     * @return restituisce i dettagli e lo stato della prenotazione.
-     */
-    private StatusBookingEnum addBooking (List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime, Table table) {
-        LocalDateTime dateTime = LocalDateTime.of(date,time);
-        if(!checkDateInCalendar(date)) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusBookingInfoEnum.DATE_OUT_OF_CALENDAR);
-        Booking newBooking = new Booking(clientsList,dateTime,rangeTime,table);
-        bookingsMap.get(date).add(newBooking);
-        return StatusBookingEnum.SUCCESS.setBookingAndGetStatus(newBooking);
-    }
 
 
     /**
@@ -80,24 +64,27 @@ public class CalendarBookings {
      * per impedire ad un altro utente di prenotare,
      * calcola i possibili tavoli liberi attraverso il metodo {@link Restaurant#getFreeTableFromTakenTables},
      * se non ci sono tavoli liberi: la prenotazione non ha successo | se ci sono tavoli liberi: la prenotazione ha successo
-     * e viene aggiunta attraverso il metodo {@link it.logic.calendar.CalendarBookings#addBooking}.
+     * e viene aggiunta alla bookingsMap.
      * @param clientsList lista di persone legate alla singola prenotazione.
      * @param date data in cui si vuole prenotare.
      * @param time orario in cui si vuole prenotare.
      * @param rangeTime durata della permanenza al tavolo.
      * @return lo stato della prenotazione.
      */
-    public synchronized StatusBookingEnum bookTable (List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime) {
+    public synchronized StatusBooking bookTable (List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime) {
+        if(!checkDateInCalendar(date)) return new StatusBooking(false,InfoBookingEnum.DATE_OUT_OF_CALENDAR);
         if(rangeTime<minRangeBetweenBookings) rangeTime = minRangeBetweenBookings;
         int peopleNumber = clientsList.size();
         Set<Table> overlappingTables = getTablesOverlappingTime(date,time,rangeTime);
         TreeSet<Table> freeTables = restaurant.getFreeTableFromTakenTables(overlappingTables,peopleNumber);
-        if(freeTables.isEmpty()) return StatusBookingEnum.NOT_SUCCESS.setInfoAndGetStatus(StatusBookingInfoEnum.NO_FREE_TABLES);
-        return addBooking(clientsList,date,time,rangeTime,freeTables.first());
+        if(freeTables.isEmpty()) return new StatusBooking(false,InfoBookingEnum.NO_FREE_TABLES);
+        Booking newBooking = new Booking(clientsList,LocalDateTime.of(date,time),rangeTime,freeTables.first());
+        bookingsMap.get(date).add(newBooking);
+        return new StatusBooking(true,InfoBookingEnum.NO_INFO,newBooking);
     }
 
 
-    public synchronized StatusBookingEnum bookTableWithMinRange (List<Client> clientsList, LocalDate date, LocalTime time) {
+    public synchronized StatusBooking bookTableWithMinRange (List<Client> clientsList, LocalDate date, LocalTime time) {
         return bookTable(clientsList,date,time,minRangeBetweenBookings);
     }
 
