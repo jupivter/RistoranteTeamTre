@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" afterDir="false" />
+    <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="aggiunta stampa della tabella (attenzione alle credenziali del db">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023_15_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023_15_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_05_01_2023_17_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_05_01_2023_17_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_15_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_15_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_17_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_17_17__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +25,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="francesco" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,16 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/Documents/DEVELHOPE/JAVA/Progetto Menù/Team1_RestaurantMenu&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "last_opened_file_path": "C:/Users/g92/OneDrive/Desktop/Develhope/RESTAURANT_TEAM_3/RistoranteTeamTre",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.database" />
+      <recent name="it.logic.calendar" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +113,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669047008707</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modifica nome classe TypePortataEnum.java">
+      <created>1672931659936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672931659936</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creazione Packege Database, Classe Create e Classe TestCreate.">
+      <created>1672934556814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672934556814</updated>
+    </task>
+    <task id="LOCAL-00007" summary="aggiunta stampa della tabella (attenzione alle credenziali del db">
+      <created>1672940206702</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672940206702</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,7 +148,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/linkedList" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
@@ -117,6 +165,9 @@
     <MESSAGE value="correzione progetto" />
     <MESSAGE value="add Primi" />
     <MESSAGE value="Modifiche varie Christian" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie Christian" />
+    <MESSAGE value="modifica nome classe TypePortataEnum.java" />
+    <MESSAGE value="Creazione Packege Database, Classe Create e Classe TestCreate." />
+    <MESSAGE value="aggiunta stampa della tabella (attenzione alle credenziali del db" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta stampa della tabella (attenzione alle credenziali del db" />
   </component>
 </project>

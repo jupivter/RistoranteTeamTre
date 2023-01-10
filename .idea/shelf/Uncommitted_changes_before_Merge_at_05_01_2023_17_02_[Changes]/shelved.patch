@@ -1,0 +1,260 @@
+Index: src/it/restaurant/portate/Portata.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package it.restaurant.portate;\r\n/**\r\n * Creazione classe padre Portata\r\n */\r\npublic class Portata {\r\n    /**\r\n     *  Variabili instanziate name e price + costruttore\r\n     */\r\n    private String name;\r\n    private double price;\r\n    private TypePortataEnum type;\r\n\r\n    public Portata(String name, double price, TypePortataEnum type) {\r\n        this.name = name;\r\n        this.price = price;\r\n        this.type = type;\r\n    }\r\n\r\n\r\n    /**\r\n     * Get & Set delle variabili\r\n     */\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    public double getPrice() {\r\n        return price;\r\n    }\r\n\r\n    public void setPrice(double price) {\r\n        this.price = price;\r\n    }\r\n\r\n\r\n    public TypePortataEnum getType() {\r\n        return type;\r\n    }\r\n\r\n    public void setType(TypePortataEnum type) {\r\n        this.type = type;\r\n    }\r\n\r\n    /**\r\n     * Metodo printPortataDetails() che ci stamperà tutte le info delle varie portate\r\n     */\r\n    public void stampaDettagli() {\r\n        System.out.println(\"Nome : \" + name + \" - \" + price);\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/it/restaurant/portate/Portata.java b/src/it/restaurant/portate/Portata.java
+--- a/src/it/restaurant/portate/Portata.java	(revision 20d2602112ee036d597d05bd9cc0cd1090a89cb0)
++++ b/src/it/restaurant/portate/Portata.java	(date 1672933912677)
+@@ -1,4 +1,9 @@
+ package it.restaurant.portate;
++
++import it.database.Create;
++
++import java.sql.SQLException;
++
+ /**
+  * Creazione classe padre Portata
+  */
+@@ -52,5 +57,11 @@
+         System.out.println("Nome : " + name + " - " + price);
+     }
+ 
++    public static void createTable() throws SQLException {
++        Create.createTable("Portata","ID");
++        Create.addColTable("Portata","Name","varchar(30)");
++        Create.addColTable("Portata","Price","double");
++    }
++
+ 
+ }
+\ No newline at end of file
+Index: src/it/tests/calendar/TestsCalendarBookigns.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package it.tests.calendar;\r\n\r\nimport it.restaurant.calendar.CalendarBookings;\r\nimport it.restaurant.prenotazione.Cliente;\r\nimport org.testng.annotations.Test;\r\nimport java.time.LocalDate;\r\nimport java.time.LocalTime;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Random;\r\n\r\npublic class TestsCalendarBookigns {\r\n\r\n    private TestsCalendarBookigns () {}\r\n\r\n    private CalendarBookings calendar = CalendarBookings.getInstance();\r\n\r\n    private String [] names = {\"Liam\" ,\t\"Olivia\" , \"Noah\" ,\t\"Emma\", \"Oliver\",\t\"Charlotte\",\"Elijah\"\t,\"Amelia\"\r\n            , \"James\",\t\"Ava\",\"William\",\t\"Sophia\" ,\"Benjamin\",\t\"Isabella\", \"Lucas\",\t\"Mia\",\r\n            \"Henry\",\t\"Evelyn\" ,\"Theodore\",\t\"Harper\" } ;\r\n\r\n\r\n\r\n    private LocalDate getDateFromNow (int numDays) {\r\n        return LocalDate.now().plusDays(numDays);\r\n    }\r\n\r\n\r\n    private  List<Cliente> createClientsList (int number) {\r\n        Random random = new Random();\r\n        List<Cliente> clientsList = new ArrayList<>();\r\n        for(int i=0; i<number; i++){\r\n            String randomName = names[random.nextInt(names.length)];\r\n            String randomSurname = names[random.nextInt(names.length)];\r\n            int randomPhoneNumber = random.nextInt(9999);\r\n            clientsList.add(new Cliente(randomName,randomSurname,randomPhoneNumber));\r\n        }\r\n        return clientsList;\r\n    }\r\n\r\n    @Test\r\n    private void testActivateInterval () {\r\n        calendar.activateIntervalFromDate(LocalDate.now(),10);\r\n        calendar.printDetailsOfAllDays();\r\n        calendar.resetBookingsMap();\r\n    }\r\n\r\n    @Test\r\n    private void testBookTable_00 () {\r\n        calendar.activateIntervalFromDate(LocalDate.now(),10);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(12,00),70);\r\n        calendar.printDetailsOfAllDays();\r\n        calendar.resetBookingsMap();\r\n    }\r\n\r\n    @Test\r\n    private void testOverlappingBookingAtSameTime ( ) {\r\n        calendar.activateIntervalFromDate(LocalDate.now(),10);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(12,00),70);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(12,00),70);\r\n        calendar.printDetailsOfAllDays();\r\n        calendar.resetBookingsMap();\r\n    }\r\n\r\n    @Test\r\n    private void testOverlappingBookingAfter ( ) {\r\n        calendar.activateIntervalFromDate(LocalDate.now(),10);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(12,00),70);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(12,10),70);\r\n        calendar.printDetailsOfAllDays();\r\n        calendar.resetBookingsMap();\r\n    }\r\n\r\n\r\n    @Test\r\n    private void testOverlappingBookingBefore ( ) {\r\n        calendar.activateIntervalFromDate(LocalDate.now(),10);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(12,00),70);\r\n        calendar.bookTable(createClientsList(4),getDateFromNow(2), LocalTime.of(11,50),70);\r\n        calendar.printDetailsOfAllDays();\r\n        calendar.resetBookingsMap();\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/it/tests/calendar/TestsCalendarBookigns.java b/src/it/tests/calendar/TestsCalendarBookigns.java
+--- a/src/it/tests/calendar/TestsCalendarBookigns.java	(revision 20d2602112ee036d597d05bd9cc0cd1090a89cb0)
++++ b/src/it/tests/calendar/TestsCalendarBookigns.java	(date 1672934243784)
+@@ -3,6 +3,7 @@
+ import it.restaurant.calendar.CalendarBookings;
+ import it.restaurant.prenotazione.Cliente;
+ import org.testng.annotations.Test;
++
+ import java.time.LocalDate;
+ import java.time.LocalTime;
+ import java.util.ArrayList;
+Index: RistoranteTeamTre.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"module-library\">\r\n      <library name=\"testng\">\r\n        <CLASSES>\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/testng/testng/7.1.0/testng-7.1.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/\" />\r\n          <root url=\"jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RistoranteTeamTre.iml b/RistoranteTeamTre.iml
+--- a/RistoranteTeamTre.iml	(revision 20d2602112ee036d597d05bd9cc0cd1090a89cb0)
++++ b/RistoranteTeamTre.iml	(date 1672934341729)
+@@ -22,5 +22,41 @@
+         <SOURCES />
+       </library>
+     </orderEntry>
++    <orderEntry type="module-library">
++      <library name="testng">
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.1.0/testng-7.1.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/" />
++          <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
++    <orderEntry type="module-library">
++      <library>
++        <CLASSES>
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES>
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/build/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/demo/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/generated/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/legacy/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/main/core-api/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/main/core-impl/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/main/protocol-impl/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/main/user-api/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/main/user-impl/java" />
++          <root url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31/src/test/java" />
++        </SOURCES>
++        <jarDirectory url="file://$MODULE_DIR$/../../SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31" recursive="false" />
++      </library>
++    </orderEntry>
+   </component>
+ </module>
+\ No newline at end of file
+Index: src/it/database/TestCreate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/it/database/TestCreate.java b/src/it/database/TestCreate.java
+new file mode 100644
+--- /dev/null	(date 1672934126602)
++++ b/src/it/database/TestCreate.java	(date 1672934126602)
+@@ -0,0 +1,13 @@
++package it.database;
++
++import it.restaurant.portate.Portata;
++
++import java.sql.SQLException;
++
++public class TestCreate {
++    public static void main(String[] args) throws SQLException {
++
++        Portata.createTable();
++
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9c230840-c1a4-4896-8438-0a5a7d72c292\" name=\"Changes\" comment=\"Modifiche varie Christian\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/it/restaurant/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/it/restaurant/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/it/restaurant/Menu.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/it/restaurant/Menu.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/it/restaurant/portate/Portata.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/it/restaurant/portate/Portata.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/it/restaurant/portate/TypesPortataEnum.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/it/restaurant/portate/TypePortataEnum.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <excluded-from-favorite>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"REMOTE\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/master\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </excluded-from-favorite>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"develop\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2H230uSd2WSEAYnoSQNagCXxW2A\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/Documents/DEVELHOPE/JAVA/Progetto Menù/Team1_RestaurantMenu&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9c230840-c1a4-4896-8438-0a5a7d72c292\" name=\"Changes\" comment=\"Modifiche varie Christian\" />\r\n      <created>1667469131977</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1667469131977</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"aggiunta classe enum\">\r\n      <created>1667830368697</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667830368697</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"correzione progetto\">\r\n      <created>1667833772739</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667833772739</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"add Primi\">\r\n      <created>1667837200521</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667837200521</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Modifiche varie Christian\">\r\n      <created>1669047008707</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669047008707</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Peppe\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"aggiunta classe enum\" />\r\n    <MESSAGE value=\"correzione progetto\" />\r\n    <MESSAGE value=\"add Primi\" />\r\n    <MESSAGE value=\"Modifiche varie Christian\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Modifiche varie Christian\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 20d2602112ee036d597d05bd9cc0cd1090a89cb0)
++++ b/.idea/workspace.xml	(date 1672934341744)
+@@ -5,13 +5,12 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="Modifiche varie Christian">
++      <change afterPath="$PROJECT_DIR$/src/it/database/Create.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/it/database/TestCreate.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Menu.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/RistoranteTeamTre.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeamTre.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/TypesPortataEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/portate/TypePortataEnum.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/it/tests/calendar/TestsCalendarBookigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/tests/calendar/TestsCalendarBookigns.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -56,16 +55,20 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/Documents/DEVELHOPE/JAVA/Progetto Menù/Team1_RestaurantMenu&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "C:/Users/Giuse/Desktop/SQL/LIBRERIA IMPORTANTE/mysql-connector-j-8.0.31",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.0"
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -103,7 +106,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669047008707</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="modifica nome classe TypePortataEnum.java">
++      <created>1672931659936</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1672931659936</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -134,6 +144,7 @@
+     <MESSAGE value="correzione progetto" />
+     <MESSAGE value="add Primi" />
+     <MESSAGE value="Modifiche varie Christian" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie Christian" />
++    <MESSAGE value="modifica nome classe TypePortataEnum.java" />
++    <option name="LAST_COMMIT_MESSAGE" value="modifica nome classe TypePortataEnum.java" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/it/database/Create.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/it/database/Create.java b/src/it/database/Create.java
+new file mode 100644
+--- /dev/null	(date 1672933480666)
++++ b/src/it/database/Create.java	(date 1672933480666)
+@@ -0,0 +1,39 @@
++package it.database;
++
++import java.sql.Connection;
++import java.sql.DriverManager;
++import java.sql.SQLException;
++import java.sql.Statement;
++
++public class Create {
++
++    private static final String url = "jdbc:mysql://localhost:3306/newdb";
++    private static final String user = "developer";
++    private static final  String password = "passwordhere";
++
++    public static void createTable(String tableName, String idName) throws SQLException {
++        Connection conn = DriverManager.getConnection(url,user,password);
++
++        Statement statement= conn.createStatement();
++        String varname1 =  ""
++                + "CREATE TABLE `"+tableName+"` ( "
++                + "  `"+idName+"` int NOT NULL AUTO_INCREMENT, "
++                + "  PRIMARY KEY (`"+idName+"`) "
++                + ")";
++        statement.executeUpdate(varname1);
++        statement.close();
++
++    }
++    public static void addColTable(String tableName, String colName,String type) throws SQLException {
++        Connection conn =DriverManager.getConnection(url,user,password);
++
++        Statement statement= conn.createStatement();
++
++        String varname1 = ""
++                + "ALTER TABLE newdb."+tableName+" ADD "+colName+" "+type+" NULL;";
++
++
++        statement.executeUpdate(varname1);
++        statement.close();
++    }
++}
