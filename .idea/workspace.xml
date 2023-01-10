@@ -5,46 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c230840-c1a4-4896-8438-0a5a7d72c292" name="Changes" comment="aggiunta stampa della tabella (attenzione alle credenziali del db">
-      <change afterPath="$PROJECT_DIR$/src/it/database/Alter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/database/DatabaseCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/portate/CategoryEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/portate/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/portate/CourseTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/portate/Dish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/portate/Drink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/restaurant/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/restaurant/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/restaurant/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/logic/restaurant/TestRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07b5774e735d4ad20d32155ff8a84577188a19d5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d3a3176ecf9a9dbec962a9c6ea4a69810d6d2da" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f8cc7502eaaf65ef10b48a2c06e8568e4904b17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/802373ef1faebe167908dd9c2cd32a31a5a2999e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e5e46c7e1a5bad72189747b6d251983521ea9553" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee38c84ecdc86222ea2c9bd5fcef57fd4bb35a25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f29805ac8fc52fb80bafc3c8525dc16c3bebe839" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023_15_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023_15_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_05_01_2023_17_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_05_01_2023_17_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_15_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_15_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_17_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2023_17_17__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/database/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/database/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/database/TestCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/database/TestCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/database/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/database/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Ristorante.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/calendar/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/CalendarBookings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/calendar/CalendarBookings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/StatusBookingEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/calendar/StatusBookingEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/StatusBookingInfoEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/calendar/StatusBookingInfoEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/calendar/TestCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/calendar/TestCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Bevanda.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/CategoriesEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Piatto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/Portata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/portate/TypePortataEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/prenotazione/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/prenotazione/Tavolo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/utility/Comparators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/logic/utility/Comparators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/tests/calendar/TestsCalendarBookigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/tests/calendar/TestsCalendarBookings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,21 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/Documents/DEVELHOPE/JAVA/Exercises/javadoc-1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "last_opened_file_path": "C:/Users/g92/OneDrive/Desktop/Develhope/RESTAURANT_TEAM_3/RistoranteTeamTre",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.database" />
+      <recent name="it.logic.calendar" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

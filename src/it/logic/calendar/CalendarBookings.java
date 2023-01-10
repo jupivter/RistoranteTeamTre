@@ -48,7 +48,7 @@ public class CalendarBookings {
     public void activateIntervalFromDate (LocalDate startDate, int numberOfDays) {
         for(int i=0; i<numberOfDays; i++) {
             LocalDate nextDay = startDate.plusDays(i);
-            if(bookingsMap.containsKey(nextDay)) continue;
+            if(bookingsMap.containsKey(nextDay)) {continue;}
             bookingsMap.put(nextDay, new TreeSet<>(Comparators.getCompareBookingsByDateTime()));
         }
     }
@@ -78,12 +78,12 @@ public class CalendarBookings {
      * @return lo stato della prenotazione.
      */
     public synchronized StatusBooking bookTable (List<Client> clientsList, LocalDate date, LocalTime time, long rangeTime) {
-        if(!checkDateInCalendar(date)) return new StatusBooking(false,InfoBookingEnum.DATE_OUT_OF_CALENDAR);
-        if(rangeTime<minRangeBetweenBookings) rangeTime = minRangeBetweenBookings;
+        if(!checkDateInCalendar(date)) {return new StatusBooking(false,InfoBookingEnum.DATE_OUT_OF_CALENDAR);}
+        if(rangeTime<minRangeBetweenBookings) {rangeTime = minRangeBetweenBookings;}
         int peopleNumber = clientsList.size();
         Set<Table> overlappingTables = getTablesOverlappingTime(date,time,rangeTime);
         TreeSet<Table> freeTables = restaurant.getFreeTableFromTakenTables(overlappingTables,peopleNumber);
-        if(freeTables.isEmpty()) return new StatusBooking(false,InfoBookingEnum.NO_FREE_TABLES);
+        if(freeTables.isEmpty()) {return new StatusBooking(false,InfoBookingEnum.NO_FREE_TABLES);}
         Booking newBooking = new Booking(clientsList,LocalDateTime.of(date,time),rangeTime,freeTables.first());
         bookingsMap.get(date).add(newBooking);
         return new StatusBooking(true,InfoBookingEnum.NO_INFO,newBooking);
@@ -114,10 +114,10 @@ public class CalendarBookings {
                 overlappingBookings.add(booking);
             }
             else if(bookingTime.isAfter(time)) {
-                if(distanceTime < rangeTime) overlappingBookings.add(booking);
+                if(distanceTime < rangeTime) {overlappingBookings.add(booking);}
             }
             else
-            if(distanceTime < booking.getRangeTime()) overlappingBookings.add(booking);
+            if(distanceTime < booking.getRangeTime()) {overlappingBookings.add(booking);}
         }
         return overlappingBookings;
     }
